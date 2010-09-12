@@ -92,3 +92,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+
+# http://d.hatena.ne.jp/tkng/20100712/1278896396
+# bind Ctrl + left/right as Alt + B/F
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
+
+export WORDCHARS='*?[]~=&;!#$%^(){}<>'
