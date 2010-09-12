@@ -99,4 +99,7 @@ fi
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
 
+# dont treat this characters as part of word
 export WORDCHARS='*?[]~=&;!#$%^(){}<>'
+
+
