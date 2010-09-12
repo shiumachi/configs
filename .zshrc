@@ -76,3 +76,8 @@ export PYTHONPATH=~/lib/python
 PROMPT="%{[32m%}%n@%m%{[35m%}${WINDOW:+[$WINDOW]} %{[33m%}%(4~,%-1~/.../%3~,%~)%{[m%} %# "
 RPROMPT='%{[33m%}%h %{[36m%}%T%{[m%}'
 
+# http://d.hatena.ne.jp/jeneshicc/20090224/1235475290
+# some more ls aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
