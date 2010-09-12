@@ -10,25 +10,14 @@ compinit
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
 
-## keep background processes at full speed
-#setopt NOBGNICE
-## restart running processes on exit
-#setopt HUP
-
 ## history
 setopt APPEND_HISTORY
-## for sharing history between zsh processes
-#setopt INC_APPEND_HISTORY
-#setopt SHARE_HISTORY
 
 ## never ever beep ever
 setopt NO_BEEP
 
 ## automatically decide when to page a list of completions
 #LISTMAX=0
-
-## disable mail checking
-#MAILCHECK=0
 
 # autoload -U colors
 #colors
@@ -57,8 +46,8 @@ setopt correct
 setopt list_packed
 
 # predict
-#autoload predict-on
-#predict-on
+autoload predict-on
+predict-on
 
 # colored ls completion 
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
@@ -81,4 +70,9 @@ export PATH=/usr/java/default/bin:${PATH}:/usr/local/plt/bin:/usr/local/dmd/linu
 
 # 2010/06/20
 export PYTHONPATH=~/lib/python
+
+# 2010/09/12
+# http://d.hatena.ne.jp/mig50/20060730/1154269832
+PROMPT="%{[32m%}%n@%m%{[35m%}${WINDOW:+[$WINDOW]} %{[33m%}%(4~,%-1~/.../%3~,%~)%{[m%} %# "
+RPROMPT='%{[33m%}%h %{[36m%}%T%{[m%}'
 
