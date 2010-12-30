@@ -1,11 +1,7 @@
 ;; 2008/9/16
 ;; ;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
-(setq load-path
-       (append
-              (list
-                      (expand-file-name "~/elisp/")
-                              )
-                                     load-path))
+(add-to-list 'load-path "~/elisp/")
+
  ;; 2007/11/1
  ;; .emacsへの雑多な設定より
  ;;; 色を付ける
