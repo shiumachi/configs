@@ -21,6 +21,7 @@
 ;; 色を付ける
 ;; '(global-font-lock-mode t)
 
+;; スタートアップスクリーンを表示しない
 (setq inhibit-startup-screen t)
 
 ;; 終了時にオートセーブファイルを消す
