@@ -8,9 +8,6 @@
 (require 'init-loader)
 (init-loader-load "~/elisp/inits")
 
-;; emacs -nw で起動した時にメニューバーを消す
-(if window-system (menu-bar-mode 1) (menu-bar-mode -1))
-
 ;; 略語定義ファイルの読み込み
 ;; ~/elisp/.abbrev_defsが存在していなかったら読み込まない
 ;; change directory from site-lisp to elisp
@@ -41,20 +38,6 @@
     (add-hook 'write-file-hooks 'time-stamp-with-locale-c))
 
 (setq time-stamp-format "%3a %3b %02d %02H:%02M:%02S %Z %:y")
-
-;; 画像ファイルを表示する
-(auto-image-file-mode t)
-
-;; セッションを保存する
-;; 初めは手動でM-x desktop-saveしなければいけない
-(desktop-load-default)
-(desktop-read)
-
-;; 次のGCまでに使用可能なバイト数
-(setq gc-cons-threshold 4096000)
-
-;; 最近使ったファイルを保存(M-x recentf-open-filesで開く)
-(recentf-mode)
 
  ;; 2007/11/18
  ;; cvs用キーバインド
@@ -262,53 +245,6 @@
 ;; http://namikister.blog101.fc2.com/blog-entry-9.html
 (require 'xcscope)
 
-;; 2010/12/30
-;; http://www.bookshelf.jp/soft/meadow_30.html#SEC419
-(defun my-window-size-save ()
-  (let* ((rlist (frame-parameters (selected-frame)))
-         (ilist initial-frame-alist)
-         (nCHeight (frame-height))
-         (nCWidth (frame-width))
-         (tMargin (if (integerp (cdr (assoc 'top rlist)))
-                      (cdr (assoc 'top rlist)) 0))
-         (lMargin (if (integerp (cdr (assoc 'left rlist)))
-                      (cdr (assoc 'left rlist)) 0))
-         buf
-         (file "~/.framesize.el"))
-    (if (get-file-buffer (expand-file-name file))
-        (setq buf (get-file-buffer (expand-file-name file)))
-      (setq buf (find-file-noselect file)))
-    (set-buffer buf)
-    (erase-buffer)
-    (insert (concat
-             ;; 初期値をいじるよりも modify-frame-parameters
-             ;; で変えるだけの方がいい?
-             "(delete 'width initial-frame-alist)\n"
-             "(delete 'height initial-frame-alist)\n"
-             "(delete 'top initial-frame-alist)\n"
-             "(delete 'left initial-frame-alist)\n"
-             "(setq initial-frame-alist (append (list\n"
-             "'(width . " (int-to-string nCWidth) ")\n"
-             "'(height . " (int-to-string nCHeight) ")\n"
-             "'(top . " (int-to-string tMargin) ")\n"
-             "'(left . " (int-to-string lMargin) "))\n"
-             "initial-frame-alist))\n"
-             ;;"(setq default-frame-alist initial-frame-alist)"
-             ))
-    (save-buffer)
-    ))
-
-(defun my-window-size-load ()
-  (let* ((file "~/.framesize.el"))
-    (if (file-exists-p file)
-        (load file))))
-
-(my-window-size-load)
-
-;; Call the function above at C-x C-c.
-(defadvice save-buffers-kill-emacs
-  (before save-frame-size activate)
-  (my-window-size-save))
 
 ;;2007/11/5
 ;;Emacs で C 言語プログラミングを始める人へのイントロダクション
