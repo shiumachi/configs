@@ -31,8 +31,8 @@
 ;; バックアップファイルを作らない
 (setq backup-inhibited t)
 
- ;;; 終了時にオートセーブファイルを消す
- (setq delete-auto-save-files t)
+;; 終了時にオートセーブファイルを消す
+(setq delete-auto-save-files t)
 
  ;;; 補完時に大文字小文字を区別しない
  (setq completion-ignore-case t)
