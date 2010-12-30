@@ -27,10 +27,9 @@
   ;; If there is more than one, they won't work right.
  )
 
- ;; 2007/11/1
- ;; .emacsへの雑多な設定より
- ;;; バックアップファイルを作らない
- (setq backup-inhibited t)
+;; global variable
+;; バックアップファイルを作らない
+(setq backup-inhibited t)
 
  ;;; 終了時にオートセーブファイルを消す
  (setq delete-auto-save-files t)
