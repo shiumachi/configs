@@ -81,3 +81,34 @@
 
 ;; 最近使ったファイルを保存(M-x recentf-open-filesで開く)
 (recentf-mode)
+
+;; 略語定義ファイルの読み込み
+;; ~/elisp/.abbrev_defsが存在していなかったら読み込まない
+;; change directory from site-lisp to elisp
+(let ((file "~/elisp/.abbrev_defs"))
+  (setq abbrev-file-name file)
+  (if (file-exists-p file)
+;;       (quietly-read-abbrev-file file)))
+      (read-abbrev-file file)))
+
+;; 略語定義が変更されていたら黙って保存
+(setq save-abbrevs 'silently)
+
+;; デフォルトでAbbrevモードにする
+(setq default-abbrev-mode t)
+
+;; 最終更新日の自動挿入
+;;   ファイルの先頭から 8 行以内に Time-stamp: <> または
+;;   Time-stamp: " " と書いてあれば、セーブ時に自動的に日付が挿入される
+(require 'time-stamp)
+
+;; 日本語で日付を入れたくないのでlocaleをCにする
+(defun time-stamp-with-locale-c ()
+  (let ((system-time-locale "C"))
+    (time-stamp)
+    nil))
+
+(if (not (memq 'time-stamp-with-locale-c write-file-hooks))
+    (add-hook 'write-file-hooks 'time-stamp-with-locale-c))
+
+(setq time-stamp-format "%3a %3b %02d %02H:%02M:%02S %Z %:y")
