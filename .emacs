@@ -7,9 +7,6 @@
  ;;; 色を付ける
  (global-font-lock-mode t)
 
- ;;; 対応する括弧を光らせる。
- (show-paren-mode 1)
-
  ;;; バックアップファイルを作らない
  (setq backup-inhibited t)
 
@@ -25,12 +22,6 @@
  ;;; 補完可能なものを随時表示
  ;;; 少しうるさい
  (icomplete-mode 1)
-
- ;;; カーソルの点滅を止める
- (blink-cursor-mode 0)
-
- ;;; カーソルの位置が何文字目かを表示する
- (column-number-mode t)
 
  ;;; カーソルの位置が何行目かを表示する
  (line-number-mode t)
@@ -62,9 +53,6 @@
 
  ;;; タイトルバーにファイル名を表示する
  (setq frame-title-format (format "emacs@%s : %%f" (system-name)))
-
- ;;; モードラインに時間を表示する
- (display-time)
 
  ;;; 現在の関数名をモードラインに表示
  (which-function-mode 1)
@@ -142,11 +130,16 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(blink-cursor-mode nil)
- '(column-number-mode t)
- '(display-time-mode t)
- '(inhibit-startup-screen t)
- '(show-paren-mode t))
+  ;; カーソルの点滅を止める
+  '(blink-cursor-mode nil)
+  ;; カーソルの位置が何文字目かを表示する
+  '(column-number-mode t)
+  ;; モードラインに時間を表示する
+  '(display-time-mode t)
+  '(inhibit-startup-screen t)
+  ;; 対応する括弧を光らせる。
+  '(show-paren-mode t)
+)
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
