@@ -75,7 +75,6 @@
  ;;; 最終更新日の自動挿入
  ;;;   ファイルの先頭から 8 行以内に Time-stamp: <> または
  ;;;   Time-stamp: " " と書いてあれば、セーブ時に自動的に日付が挿入される
-
  (require 'time-stamp)
 
  ;; 日本語で日付を入れたくないのでlocaleをCにする
@@ -102,7 +101,6 @@
 
  ;;; 最近使ったファイルを保存(M-x recentf-open-filesで開く)
  (recentf-mode)
-
 
  ;;2007/11/5
  ;;Emacs で C 言語プログラミングを始める人へのイントロダクション
@@ -140,6 +138,7 @@
   ;; 対応する括弧を光らせる。
   '(show-paren-mode t)
 )
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -172,11 +171,9 @@
         )
  default-frame-alist))
 
-
 ;; 2008/12/20
 ;; http://d.hatena.ne.jp/mzp/20081207/autoerase
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 
 ;; 2008/12/21
 ;; http://www.cozmixng.org/~kou/emacs/dot_emacs
@@ -207,7 +204,6 @@
 ;; C-h prefix
 (define-key help-map "/" 'ispell-complete-word)
 
-
 ;; http://d.hatena.ne.jp/higepon/20060107/1136628498
 ;; GLOBAL用
 (autoload 'gtags-mode "gtags" "" t)
@@ -235,7 +231,6 @@
 ;;(add-to-list 'ac-dictionary-directories "~/elisp/ac-dict")
 ;;(require 'auto-complete-config)
 ;;(ac-config-default)
-
 
 (setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
 (setq interpreter-mode-alist (cons '("python" . python-mode) interpreter-mode-alist))
@@ -309,7 +304,6 @@
 ;; 2010/06/30
 ;; for Processing
 (setq auto-mode-alist (cons '("\\.pde$" . java-mode) auto-mode-alist))
-
 
 ;; 2010/10/20
 ;; org-mode
