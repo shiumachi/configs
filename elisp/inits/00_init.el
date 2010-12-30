@@ -67,3 +67,17 @@
 
 ;; 現在の関数名をモードラインに表示
 (which-function-mode 1)
+
+;; 画像ファイルを表示する
+(auto-image-file-mode t)
+
+;; セッションを保存する
+;; 初めは手動でM-x desktop-saveしなければいけない
+(desktop-load-default)
+(desktop-read)
+
+;; 次のGCまでに使用可能なバイト数
+(setq gc-cons-threshold 4096000)
+
+;; 最近使ったファイルを保存(M-x recentf-open-filesで開く)
+(recentf-mode)
