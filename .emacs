@@ -116,15 +116,6 @@
 ;; 最近使ったファイルを保存(M-x recentf-open-filesで開く)
 (recentf-mode)
 
- ;;2007/11/5
- ;;Emacs で C 言語プログラミングを始める人へのイントロダクション
- ;;flyspell-prog-mode(自動ispell機能)
- ;;(add-hook 'c-mode-common-hook
- ;;          '(lambda ()
- ;;             ;; flyspell-prog-mode をオンにする
- ;;             (flyspell-prog-mode)
- ;;))
-
  ;; 2007/11/18
  ;; cvs用キーバインド
  (global-set-key "\M-s" 'cvs-status)
@@ -136,7 +127,6 @@
  (require 'color-theme)
  (color-theme-initialize)
  (color-theme-clarity)
-
 
 ;; 2008/10/25
 ;; for ruby
@@ -379,3 +369,12 @@
 (defadvice save-buffers-kill-emacs
   (before save-frame-size activate)
   (my-window-size-save))
+
+;;2007/11/5
+;;Emacs で C 言語プログラミングを始める人へのイントロダクション
+;;flyspell-prog-mode(自動ispell機能)
+;;(add-hook 'c-mode-common-hook
+;;          '(lambda ()
+;;             ;; flyspell-prog-mode をオンにする
+;;             (flyspell-prog-mode)
+;;))
