@@ -16,6 +16,8 @@
   '(inhibit-startup-screen t)
   ;; 対応する括弧を光らせる。
   '(show-paren-mode t)
+  ;; 色を付ける
+  ;; '(global-font-lock-mode t)
 )
 
 (custom-set-faces
@@ -27,9 +29,6 @@
 
  ;; 2007/11/1
  ;; .emacsへの雑多な設定より
- ;;; 色を付ける
- (global-font-lock-mode t)
-
  ;;; バックアップファイルを作らない
  (setq backup-inhibited t)
 
@@ -163,7 +162,6 @@
 (add-hook 'ruby-mode-hook
           '(lambda ()
             (inf-ruby-keys)))
-(global-font-lock-mode 1)
 (setq default-frame-alist
       (append
        '((foreground-color . "gray")  ;
