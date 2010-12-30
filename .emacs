@@ -8,18 +8,9 @@
 (require 'init-loader)
 (init-loader-load "~/elisp/inits")
 
-
  ;; 2007/11/18
  ;; cvs用キーバインド
  (global-set-key "\M-s" 'cvs-status)
-
- ;; 2007/12/23
- ;; カラーテーマ用
- ;; http://blog.mizoshiri.com/archives/50
- ;; http://www.emacswiki.org/cgi-bin/wiki/ColorTheme
- (require 'color-theme)
- (color-theme-initialize)
- (color-theme-clarity)
 
 ;; 2008/10/25
 ;; for ruby
