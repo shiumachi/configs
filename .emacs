@@ -2,6 +2,12 @@
 ;; ;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
 (add-to-list 'load-path "~/elisp/")
 
+;; 2010/12/30
+;; http://tech.kayac.com/archive/divide-dot-emacs.html
+;; for separate dotfile
+(require 'init-loader)
+(init-loader-load "~/elisp/inits")
+
 ;; global variable
 ;; カーソルの点滅を止める
 (blink-cursor-mode nil)
