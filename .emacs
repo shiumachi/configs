@@ -6,9 +6,6 @@
  ;; .emacsへの雑多な設定より
  ;;; 色を付ける
  (global-font-lock-mode t)
- ;;(setq font-lock-support-mode 'fast-lock-mode)
- ;;(setq font-lock-maximum-decoration t)
- ;;(setq fast-lock-cache-directories '("~/.emacs-flc" "."))
 
  ;;; 対応する括弧を光らせる。
  (show-paren-mode 1)
@@ -23,8 +20,6 @@
  (setq completion-ignore-case t)
 
  ;;; 強力な補完機能を使う
- ;;; p-bでprint-bufferとか
- ;;(load "complete")
  (partial-completion-mode 1)
 
  ;;; 補完可能なものを随時表示
@@ -109,10 +104,6 @@
  ;;; 画像ファイルを表示する
  (auto-image-file-mode t)
 
- ;;; 自動でファイルを挿入する
- ;; 2007/11/18 コメントアウト
- ;;(auto-insert-mode t)
-
  ;;; セッションを保存する
  ;;; 初めは手動でM-x desktop-saveしなければいけない
  (desktop-load-default)
@@ -163,24 +154,6 @@
   ;; If there is more than one, they won't work right.
  )
 
-;; 2008/3/22
-;; フォントの設定
-;(create-fontset-from-fontset-spec "-shinonome-gothic-medium-r-normal--14-*-*-*-*-*-fontset-shinonome12")
-;(create-fontset-from-fontset-spec "-shinonome-mincho-medium-r-normal--14-*-*-*-*-*-jisx0208*")
-;; デフォルトフォントの変更
-;(add-to-list 'default-frame-alist
-;             '(font . "-shinonome-gothic-medium-r-normal--14-*-*-*-*-*-jisx0208*"))
-
-;; 2008/6/7
-;; http://tmcosmos.org/linux/fedora/7/users.html
-;===================================
-; Anthy
-;===================================
-;;(set-input-method "japanese-anthy")
-;;
-;;
-
-
 ;; 2008/10/25
 ;; for ruby
 ;; http://www.goodpic.com/mt/archives2/2005/09/mac_osxemacsrub.html
@@ -206,39 +179,6 @@
         )
  default-frame-alist))
 
-;; 2008/10/25
-;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
-;; ruby-electric
-;(require 'ruby-electric)
-;(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
-
-
-
-
-;; 2008/12/2
-;;http://d.hatena.ne.jp/kazu-yamamoto/20081117/1226909425
-;;(define-key completion-list-mode-map "\C-n" 'next-completion)
-;;(define-key completion-list-mode-map "\C-f" 'next-completion)
-;;(define-key completion-list-mode-map "\C-p" 'previous-completion)
-;;(define-key completion-list-mode-map "\C-b" 'previous-completion)
-;;(define-key completion-list-mode-map "\C-m" 'my-choose-completion)
-;;
-;;(defun my-choose-completion ()
-;;  "Choose the completion that point is in or next to."
-;;  (interactive)
-;;  (let (beg end completion (buffer completion-reference-buffer)
-;;	(base-size completion-base-size))
-;;    (if (and (not (eobp)) (get-text-property (point) 'mouse-face))
-;;	(setq end (point) beg (1+ (point))))
-;;    (if (and (not (bobp)) (get-text-property (1- (point)) 'mouse-face))
-;;	(setq end (1- (point)) beg (point)))
-;;    (if (null beg)
-;;	(error "No completion here"))
-;;    (setq beg (previous-single-property-change beg 'mouse-face))
-;;    (setq end (or (next-single-property-change end 'mouse-face) (point-max)))
-;;    (setq completion (buffer-substring-no-properties beg end))
-;;    (delete-completion-window)
-;;    (choose-completion-string completion buffer base-size)))
 
 ;; 2008/12/20
 ;; http://d.hatena.ne.jp/mzp/20081207/autoerase
@@ -252,20 +192,6 @@
 (define-key global-map "\M-?" 'help-for-help)        ; ヘルプ
 ;; 2008/12/29 comment out
 ;(define-key global-map "\C-z" 'undo)                 ; undo
-
-;; http://d.hatena.ne.jp/fedora9/20081205/1228491364
-;; 2008/12/29 comment out
-;====================================
-;;; Ctrl + v で貼り付け
-;====================================
-;(defun win-sel ()
-;  (if (or (null (mark t)) (not mark-active))
-;      (setq win-sel-v nil))
-;  win-sel-v)
-;(defun win-paste () (interactive)
-;  (if (win-sel) (delete-region (region-beginning) (region-end)))
-;  (yank))
-;(global-set-key "\C-v" 'win-paste)
 
 ;====================================
 ;;shift+矢印キーでの範囲選択
@@ -302,27 +228,11 @@
 (add-hook 'c-mode-common-hook
           '(lambda()
              (gtags-mode 1)
-;;             (gtags-make-complete-list)
-;; deprecated.
              ))
 
 ;; 2008/02/03
 ;; JF
 (require 'jf-info-check)
-
-;; 2008/02/07
-;; http://ubulog.blogspot.com/2007/09/emacsonoff.html
-;;====================================
-;;; 折り返し表示ON/OFF
-;;====================================
-;;(defun toggle-truncate-lines ()
-;;    "折り返し表示をトグル動作します."
-;;      (interactive)
-;;        (if truncate-lines
-;;	          (setq truncate-lines nil)
-;;	      (setq truncate-lines t))
-;;	  (recenter))
-;;(global-set-key "\C-c\C-l" 'toggle-truncate-lines) ; 折り返し表示ON/OFF
 
 ;; 2010/03/14
 (require 'auto-complete)
