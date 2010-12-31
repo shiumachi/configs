@@ -8,30 +8,6 @@
 (require 'init-loader)
 (init-loader-load "~/elisp/inits")
 
-;; 2008/10/25
-;; for ruby
-;; http://www.goodpic.com/mt/archives2/2005/09/mac_osxemacsrub.html
-(autoload 'ruby-mode "ruby-mode"
-  "Mode for editing ruby source files" t)
-(setq auto-mode-alist
-      (append '(("\\.rb$" . ruby-mode)) auto-mode-alist))
-(setq interpreter-mode-alist (append '(("ruby" . ruby-mode))
-                                     interpreter-mode-alist))
-(autoload 'run-ruby "inf-ruby"
-  "Run an inferior Ruby process")
-(autoload 'inf-ruby-keys "inf-ruby"
-  "Set local key defs for inf-ruby in ruby-mode")
-(add-hook 'ruby-mode-hook
-          '(lambda ()
-            (inf-ruby-keys)))
-(setq default-frame-alist
-      (append
-       '((foreground-color . "gray")  ;
-         (background-color . "black") ;
-         (cursor-color     . "blue")  ;
-        )
- default-frame-alist))
-
 ;; 2008/12/20
 ;; http://d.hatena.ne.jp/mzp/20081207/autoerase
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
