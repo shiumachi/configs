@@ -12,12 +12,6 @@
 ;; http://d.hatena.ne.jp/mzp/20081207/autoerase
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; http://gimite.net/behind/dot.emacs.txt
-;; copy with Ctrl + c
-(defun win-unselect ()
-  (transient-mark-mode -1)
-  (setq win-sel-v nil))
-
 ;; http://at-aka.blogspot.com/2006/04/emacs-ispell.html
 ;; 辞書補完機能
 ;; C-h prefix
