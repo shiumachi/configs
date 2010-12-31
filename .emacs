@@ -36,23 +36,11 @@
 ;; http://d.hatena.ne.jp/mzp/20081207/autoerase
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; 2008/12/21
-;; http://www.cozmixng.org/~kou/emacs/dot_emacs
-;;; キーバインド
-;;(define-key global-map "\C-h" 'delete-backward-char) ; 削除
-;; 2008/12/29 comment out
-;(define-key global-map "\C-z" 'undo)                 ; undo
-
 ;; http://gimite.net/behind/dot.emacs.txt
 ;; copy with Ctrl + c
 (defun win-unselect ()
   (transient-mark-mode -1)
   (setq win-sel-v nil))
-;(defun win-copy (BEG END)
-;  (interactive (list (region-beginning) (region-end)))
-;  (copy-region-as-kill BEG END)
-;  (win-unselect))
-;(global-set-key "\C-c" 'win-copy)
 
 ;; http://at-aka.blogspot.com/2006/04/emacs-ispell.html
 ;; 辞書補完機能
