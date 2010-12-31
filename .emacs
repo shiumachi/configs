@@ -40,7 +40,6 @@
 ;; http://www.cozmixng.org/~kou/emacs/dot_emacs
 ;;; キーバインド
 ;;(define-key global-map "\C-h" 'delete-backward-char) ; 削除
-(define-key global-map "\M-?" 'help-for-help)        ; ヘルプ
 ;; 2008/12/29 comment out
 ;(define-key global-map "\C-z" 'undo)                 ; undo
 

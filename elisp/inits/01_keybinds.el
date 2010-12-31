@@ -10,6 +10,5 @@
 ;; メール機能の代わりに行移動
 (global-set-key "\C-xm" 'goto-line)
 
-
-
-
+;; ヘルプを表示する
+(define-key global-map "\M-?" 'help-for-help)
