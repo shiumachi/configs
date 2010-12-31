@@ -11,4 +11,4 @@
 (global-set-key "\C-xm" 'goto-line)
 
 ;; ヘルプを表示する
-(define-key global-map "\M-?" 'help-for-help)
+(global-set-key "\M-?" 'help-for-help)
