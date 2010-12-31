@@ -44,11 +44,6 @@
 ;; 2008/12/29 comment out
 ;(define-key global-map "\C-z" 'undo)                 ; undo
 
-;====================================
-;;shift+矢印キーでの範囲選択
-;====================================
-(pc-selection-mode)
-
 ;; http://gimite.net/behind/dot.emacs.txt
 ;; copy with Ctrl + c
 (defun win-unselect ()
