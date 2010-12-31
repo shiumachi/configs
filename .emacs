@@ -8,10 +8,6 @@
 (require 'init-loader)
 (init-loader-load "~/elisp/inits")
 
- ;; 2007/11/18
- ;; cvs用キーバインド
- (global-set-key "\M-s" 'cvs-status)
-
 ;; 2008/10/25
 ;; for ruby
 ;; http://www.goodpic.com/mt/archives2/2005/09/mac_osxemacsrub.html
@@ -136,10 +132,6 @@
         (define-key iswitchb-mode-map "\C-p" 'iswitchb-prev-match)
         (define-key iswitchb-mode-map "\C-f" 'iswitchb-next-match)
         (define-key iswitchb-mode-map "\C-b" 'iswitchb-prev-match)))
-
-;; 2010/04/06
-;; メール機能の代わりに行移動
-(global-set-key "\C-xm" 'goto-line)
 
 ;; 2010/04/29
 ;; magit
