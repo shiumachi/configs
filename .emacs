@@ -32,10 +32,6 @@
              (gtags-mode 1)
              ))
 
-(setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
-(setq interpreter-mode-alist (cons '("python" . python-mode) interpreter-mode-alist))
-(autoload 'python-mode "python-mode" "Python editing mode." t)
-
 ;; 2010/03/25
 ;; http://sites.google.com/site/steveyegge2/effective-emacs
 (global-set-key "\C-x\C-m" 'execute-extended-command)
