@@ -12,3 +12,6 @@
 
 ;; ヘルプを表示する
 (global-set-key "\M-?" 'help-for-help)
+
+;;履歴一覧を開く。
+(global-set-key "\C-xf" 'recentf-open-files) 

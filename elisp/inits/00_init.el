@@ -80,7 +80,11 @@
 (setq gc-cons-threshold 4096000)
 
 ;; 最近使ったファイルを保存(M-x recentf-open-filesで開く)
-(recentf-mode)
+(recentf-mode t)
+;;http://homepage.mac.com/zenitani/elisp-j.html#recentf
+;; /sudo:hogehoge などが履歴に残っていると、起動時に毎回パ
+;; スワードを聞いてくるのでその履歴だけを削除する。tramp対策。
+(setq recentf-auto-cleanup 'never)
 
 ;; 略語定義ファイルの読み込み
 ;; ~/elisp/.abbrev_defsが存在していなかったら読み込まない

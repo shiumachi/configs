@@ -55,21 +55,6 @@
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 
-;; 2010/03/28
-;; http://ubulog.blogspot.com/2007/06/emacs.html
-;====================================
-; 最近使ったファイル」を（メニューに）表示する
-;====================================
-; M-x recentf-open-files で履歴一覧バッファが表示される。
-(require 'recentf)
-;;http://homepage.mac.com/zenitani/elisp-j.html#recentf
-;; /sudo:hogehoge などが履歴に残っていると、起動時に毎回パ
-;; スワードを聞いてくるのでその履歴だけを削除する。
-;;(setq recentf-exclude '("^/[^/:]+:")) ;;tramp対策。
-(setq recentf-auto-cleanup 'never) ;;tramp対策。
-(recentf-mode 1)
-(global-set-key "\C-xf" 'recentf-open-files) ;;履歴一覧を開く。
-
 ;;;====================================
 ;;;; Buffer 設定
 ;;;===================================
