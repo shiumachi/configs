@@ -32,10 +32,6 @@
              (gtags-mode 1)
              ))
 
-;; 2008/02/03
-;; JF
-(require 'jf-info-check)
-
 ;; 2010/03/14
 (require 'auto-complete)
 (global-auto-complete-mode t)
