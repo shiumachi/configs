@@ -32,15 +32,6 @@
              (gtags-mode 1)
              ))
 
-;; 2010/03/14
-(require 'auto-complete)
-(global-auto-complete-mode t)
-(setq ac-sources '(ac-source-abbrev ac-source-words-in-buffer))
-
-;;(add-to-list 'ac-dictionary-directories "~/elisp/ac-dict")
-;;(require 'auto-complete-config)
-;;(ac-config-default)
-
 (setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
 (setq interpreter-mode-alist (cons '("python" . python-mode) interpreter-mode-alist))
 (autoload 'python-mode "python-mode" "Python editing mode." t)
