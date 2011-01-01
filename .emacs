@@ -32,12 +32,6 @@
              (gtags-mode 1)
              ))
 
-;; 2010/03/25
-;; http://sites.google.com/site/steveyegge2/effective-emacs
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
-
 ;; 2010/04/29
 ;; magit
 ;; http://d.hatena.ne.jp/gom68/20090524/1243170341
