@@ -117,7 +117,7 @@ if [ "$PS1" ] ; then
         echo $$ > /cgroup/cpu/user/$$/tasks
 fi
 
-# 2010/12/05
-# to solve events CPU exhausting probrem
-#sudo service network restart >/dev/null 2>&1
-
+# 2011/01/09
+# screen
+# http://iandeth.dyndns.org/mt/ian/archives/000646.html
+alias screen='screen -U -D -RR'
