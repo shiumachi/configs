@@ -132,3 +132,7 @@
         (define-key iswitchb-mode-map "\C-p" 'iswitchb-prev-match)
         (define-key iswitchb-mode-map "\C-f" 'iswitchb-next-match)
         (define-key iswitchb-mode-map "\C-b" 'iswitchb-prev-match)))
+
+;; http://www.bookshelf.jp/soft/meadow_24.html#SEC263
+(require 'saveplace)
+(setq-default save-place t)
