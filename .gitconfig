@@ -3,3 +3,5 @@
 	name = Sho Shimauchi
 [color]
 	ui = auto
+[core]
+	excludesfile = ~/.gitexcludes

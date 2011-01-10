@@ -1,0 +1,30 @@
+#Editor
+*~
+*.swp
+
+# C/C++
+*.o
+*.lo
+*.la
+*.so
+*.so.*
+*.a
+
+# Java
+*.class
+*.jar
+
+# Python
+*.pyc
+
+# Package
+rhel.4.5.package
+*.tgz
+*.gz
+*.tar
+*.bz2
+
+# etc
+*.core
+*.tmp
+
