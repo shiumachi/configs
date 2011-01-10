@@ -8,15 +8,6 @@
 (require 'init-loader)
 (init-loader-load "~/elisp/inits")
 
-;; 2008/12/20
-;; http://d.hatena.ne.jp/mzp/20081207/autoerase
-;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-;; http://at-aka.blogspot.com/2006/04/emacs-ispell.html
-;; 辞書補完機能
-;; C-h prefix
-(define-key help-map "/" 'ispell-complete-word)
-
 ;; http://d.hatena.ne.jp/higepon/20060107/1136628498
 ;; GLOBAL用
 (autoload 'gtags-mode "gtags" "" t)
