@@ -72,3 +72,7 @@
 ;;             ;; flyspell-prog-mode をオンにする
 ;;             (flyspell-prog-mode)
 ;;))
+
+;; http://www.bookshelf.jp/soft/meadow_24.html#SEC263
+(require 'saveplace)
+(setq-default save-place t)
