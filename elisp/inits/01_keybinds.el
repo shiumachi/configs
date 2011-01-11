@@ -22,3 +22,6 @@
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 
+;; http://scriptlife.hacca.jp/tips/emacs.html
+;; 改行時オートインデント
+(global-set-key "\C-m" 'newline-and-indent)
