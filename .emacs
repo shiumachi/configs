@@ -64,3 +64,4 @@
 ;;             (flyspell-prog-mode)
 ;;))
 
+(desktop-save-mode t)
