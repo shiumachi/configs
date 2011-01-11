@@ -6,6 +6,13 @@
 (setq interpreter-mode-alist (cons '("python" . python-mode) interpreter-mode-alist))
 (autoload 'python-mode "python-mode" "Python editing mode." t)
 
+;; http://blog.mitakadai.me/05
+(add-hook 'python-mode-hook
+	  '(lambda()
+	     (setq indent-tabs-mode nil)
+	     (setq indent-level 4)
+	     (setq python-indent 4)))
+
 ;; http://d.hatena.ne.jp/bellbind/20100723/1279905842
 (add-hook 'python-mode-hook
           '(lambda()
