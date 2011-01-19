@@ -56,8 +56,12 @@
 (setq require-final-newline t)
 
 ;; 一行が 80 字以上になった時には自動改行する
-(setq fill-column 80)
-(setq-default auto-fill-mode t)
+;; テキストモードのみ
+(add-hook 'text-mode-hook
+	  '(lambda()
+	     (setq fill-column 80)
+	     (auto-fill-mode t)
+	     ))
 
 ;; 圧縮されたファイルも編集できるようにする
 (auto-compression-mode t)
