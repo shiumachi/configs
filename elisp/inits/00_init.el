@@ -154,3 +154,5 @@
 ;; 同名のファイルを開いたとき Switch to buffer などでファイル名がわかりやすく見えるようになる
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+;; shebang つきのファイルを実行権つけて保存
+(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
