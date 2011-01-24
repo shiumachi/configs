@@ -149,3 +149,8 @@
 ;; 辞書補完機能
 ;; C-h prefix
 (define-key help-map "/" 'ispell-complete-word)
+
+;; http://blog.clouder.jp/archives/000673.html
+;; 同名のファイルを開いたとき Switch to buffer などでファイル名がわかりやすく見えるようになる
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
