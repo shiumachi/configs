@@ -121,3 +121,8 @@ fi
 # screen
 # http://iandeth.dyndns.org/mt/ian/archives/000646.html
 alias screen='screen -U -D -RR'
+
+# 2011/02/09
+# http://d.hatena.ne.jp/rdera/20100107/1262868778
+#ディレクトリスタックに重複して記録しない
+#setopt pushd_ignore_dups
