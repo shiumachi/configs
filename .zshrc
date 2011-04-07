@@ -78,6 +78,7 @@ RPROMPT='%{[33m%}%h %{[36m%}%T%{[m%}'
 
 # http://d.hatena.ne.jp/jeneshicc/20090224/1235475290
 # some more ls aliases
+alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
