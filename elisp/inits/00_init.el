@@ -44,7 +44,7 @@
 (setq scroll-step 1)
 
 ;; スクロールバーを右側に表示する
-(set-scroll-bar-mode 'right)
+;;(set-scroll-bar-mode 'right)
 
 ;; 行の先頭でC-kを一回押すだけで行全体を消去する
 (setq kill-whole-line t)
@@ -59,7 +59,7 @@
 ;; テキストモードのみ
 (add-hook 'text-mode-hook
 	  '(lambda()
-	     (setq fill-column 80)
+	     (setq fill-column 120)
 	     (auto-fill-mode t)
 	     ))
 
