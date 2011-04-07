@@ -28,3 +28,5 @@ rhel.4.5.package
 *.core
 *.tmp
 
+# for macosx
+*.DS_Store
