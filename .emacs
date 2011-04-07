@@ -52,7 +52,7 @@
 ;; 2010/10/25
 ;; cscope
 ;; http://namikister.blog101.fc2.com/blog-entry-9.html
-(require 'xcscope)
+;; (require 'xcscope)
 
 
 ;;2007/11/5
@@ -65,3 +65,41 @@
 ;;))
 
 (desktop-save-mode t)
+
+;; 2011/04/06
+;; macosx 用設定
+;; http://journal.mycom.co.jp/column/osx/079/index.html
+(setq exec-path (cons "/bin" exec-path))
+(setq exec-path (cons "/usr/bin" exec-path))
+(setq exec-path (cons "/usr/local/bin" exec-path))
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+
+;; 2011/04/07
+;; macosx 用設定
+;; フォントを見やすくする
+;; http://sakito.jp/emacs/emacs23.html
+
+(when (>= emacs-major-version 23)
+ (set-face-attribute 'default nil
+                     :family "monaco"
+                     :height 140)
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'japanese-jisx0208
+  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'japanese-jisx0212
+  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'mule-unicode-0100-24ff
+  '("monaco" . "iso10646-1"))
+ (setq face-font-rescale-alist
+      '(("^-apple-hiragino.*" . 1.2)
+        (".*osaka-bold.*" . 1.2)
+        (".*osaka-medium.*" . 1.2)
+        (".*courier-bold-.*-mac-roman" . 1.0)
+        (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
+        (".*monaco-bold-.*-mac-roman" . 0.9)
+        ("-cdac$" . 1.3))))
