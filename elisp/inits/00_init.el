@@ -57,11 +57,11 @@
 
 ;; 一行が 80 字以上になった時には自動改行する
 ;; テキストモードのみ
-(add-hook 'text-mode-hook
-	  '(lambda()
-	     (setq fill-column 120)
-	     (auto-fill-mode t)
-	     ))
+;;(add-hook 'text-mode-hook
+;;	  '(lambda()
+;;	     (setq fill-column 80)
+;;	     (auto-fill-mode t)
+;;	     ))
 
 ;; 圧縮されたファイルも編集できるようにする
 (auto-compression-mode t)
