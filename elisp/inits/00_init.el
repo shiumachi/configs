@@ -90,6 +90,9 @@
 ;; スワードを聞いてくるのでその履歴だけを削除する。tramp対策。
 (setq recentf-auto-cleanup 'never)
 
+;; http://www.bookshelf.jp/soft/meadow_23.html
+(setq recentf-max-saved-items 100)
+
 ;; 略語定義ファイルの読み込み
 ;; ~/elisp/.abbrev_defsが存在していなかったら読み込まない
 ;; change directory from site-lisp to elisp
@@ -156,3 +159,4 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 ;; shebang つきのファイルを実行権つけて保存
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
+
