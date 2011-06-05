@@ -25,3 +25,5 @@
 ;; http://scriptlife.hacca.jp/tips/emacs.html
 ;; 改行時オートインデント
 (global-set-key "\C-m" 'newline-and-indent)
+
+;;(global-set-key "\C-c\C-m" 'execute-extended-command)
