@@ -44,7 +44,7 @@
 (setq scroll-step 1)
 
 ;; スクロールバーを右側に表示する
-(set-scroll-bar-mode 'right)
+;;(set-scroll-bar-mode 'right)
 
 ;; 行の先頭でC-kを一回押すだけで行全体を消去する
 (setq kill-whole-line t)
@@ -57,11 +57,11 @@
 
 ;; 一行が 80 字以上になった時には自動改行する
 ;; テキストモードのみ
-(add-hook 'text-mode-hook
-	  '(lambda()
-	     (setq fill-column 80)
-	     (auto-fill-mode t)
-	     ))
+;;(add-hook 'text-mode-hook
+;;	  '(lambda()
+;;	     (setq fill-column 80)
+;;	     (auto-fill-mode t)
+;;	     ))
 
 ;; 圧縮されたファイルも編集できるようにする
 (auto-compression-mode t)
@@ -89,6 +89,9 @@
 ;; /sudo:hogehoge などが履歴に残っていると、起動時に毎回パ
 ;; スワードを聞いてくるのでその履歴だけを削除する。tramp対策。
 (setq recentf-auto-cleanup 'never)
+
+;; http://www.bookshelf.jp/soft/meadow_23.html
+(setq recentf-max-saved-items 100)
 
 ;; 略語定義ファイルの読み込み
 ;; ~/elisp/.abbrev_defsが存在していなかったら読み込まない
@@ -156,3 +159,4 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 ;; shebang つきのファイルを実行権つけて保存
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
+

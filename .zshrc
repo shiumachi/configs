@@ -78,6 +78,7 @@ RPROMPT='%{[33m%}%h %{[36m%}%T%{[m%}'
 
 # http://d.hatena.ne.jp/jeneshicc/20090224/1235475290
 # some more ls aliases
+alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
@@ -126,3 +127,17 @@ alias screen='screen -U -D -RR'
 # http://d.hatena.ne.jp/rdera/20100107/1262868778
 #ディレクトリスタックに重複して記録しない
 #setopt pushd_ignore_dups
+
+# 2011/04/15
+# Hadoop Settings
+export HADOOP_HOME=${HOME}/lib/hadoop
+export HBASE_HOME=${HOME}/lib/hbase
+export ZOOKEEPER_HOME=${HOME}/lib/zookeeper
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export HIVE_HOME=${HOME}/lib/hive
+export HIVE_CONF_DIR=${HIVE_HOME}/conf
+
+export PATH=${PATH}:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin
+
+# 2011/05/16
+alias grep='grep --color'
