@@ -134,5 +134,10 @@ export HADOOP_HOME=${HOME}/lib/hadoop
 export HBASE_HOME=${HOME}/lib/hbase
 export ZOOKEEPER_HOME=${HOME}/lib/zookeeper
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-export PATH=${PATH}:${HADOOP_HOME}/bin:${HBASE_HOME}/bin
+export HIVE_HOME=${HOME}/lib/hive
+export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
+export PATH=${PATH}:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin
+
+# 2011/05/16
+alias grep='grep --color'
