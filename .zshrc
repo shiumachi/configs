@@ -103,20 +103,6 @@ bindkey ";5D" backward-word
 # dont treat this characters as part of word
 export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 
-# 2010/11/22
-# alternative method of highspeed 200 lines patch
-# http://d.hatena.ne.jp/pyopyopyo/20101121/p1
-#if [ "$PS1" ] ; then
-#           mkdir -m 0700 /sys/fs/cgroup/cpu/user/$$
-#           echo $$ > /sys/fs/cgroup/cpu/user/$$/tasks
-#fi
-
-# http://www.spinics.net/linux/fedora/fedora-users/msg386262.html
-if [ "$PS1" ] ; then
-        mkdir -m 0700 -p /cgroup/cpu/user/$$
-        echo 1 > /cgroup/cpu/user/$$/notify_on_release
-        echo $$ > /cgroup/cpu/user/$$/tasks
-fi
 
 # 2011/01/09
 # screen
