@@ -128,16 +128,34 @@ alias screen='screen -U -D -RR'
 #ディレクトリスタックに重複して記録しない
 #setopt pushd_ignore_dups
 
-# 2011/04/15
-# Hadoop Settings
-export HADOOP_HOME=${HOME}/lib/hadoop
-export HBASE_HOME=${HOME}/lib/hbase
-export ZOOKEEPER_HOME=${HOME}/lib/zookeeper
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-export HIVE_HOME=${HOME}/lib/hive
-export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
-export PATH=${PATH}:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin
 
 # 2011/05/16
 alias grep='grep --color'
+
+
+
+# 2011/05/19
+# for lzo compression
+export JAVA_HOME=/usr/java/default
+export ANT_HOME=${HOME}/lib/apache-ant-1.8.2
+export PATH=${ANT_HOME}/bin:${PATH}
+
+# 2011/05/23
+# maven
+export M2_HOME=${HOME}/lib/apache-maven-2.2.1
+export PATH=${M2_HOME}/bin:${PATH}
+
+export HADOOP_HOME=/usr/lib/hadoop
+export HADOOP_CONF_DIR=${HADOOP_HOME}/conf
+
+export HIVE_HOME=/usr/lib/hive
+export HIVE_PATH=${HIVE_HOME}/lib
+export HIVE_CONF_DIR=${HIVE_HOME}/conf
+
+export MAHOUT_HOME=~/lib/mahout
+export MAHOUT_PATH=${MAHOUT_HOME}/lib
+
+export HBASE_HOME=/usr/lib/hbase
+
+export PATH=${PATH}:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:/sbin:/usr/sbin:/usr/local/sbin
