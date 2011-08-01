@@ -144,3 +144,9 @@ export PATH=${PATH}:${HOME}/bin:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME
 # 2011/05/16
 alias grep='grep --color'
 
+alias ..2='../..'
+alias ..3='../../..'
+alias ..4='../../../..'
+alias ..5='../../../../..'
+alias ..6='../../../../../..'
+
