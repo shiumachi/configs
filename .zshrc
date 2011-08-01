@@ -137,9 +137,10 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export HIVE_HOME=${HOME}/lib/hive
 export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
-export M2_HOME=/usr/local/Cellar/maven/3.0.3
+export M3_HOME=/usr/local/Cellar/maven/3.0.3
 
-export PATH=${PATH}:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:${M2_HOME}/bin
+export PATH=${PATH}:${HOME}/bin:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:${M3_HOME}/bin
 
 # 2011/05/16
 alias grep='grep --color'
+
