@@ -62,7 +62,6 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 # 2009/01/24
 alias xhtags='htags -gsanohITv'
 
-export PATH=/usr/java/default/bin:${PATH}:/usr/local/plt/bin:/usr/local/dmd/linux/bin:~/src/depot_tools
 
 
 # 2010/06/20
@@ -136,7 +135,7 @@ export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
 export M3_HOME=/usr/local/Cellar/maven/3.0.3
 
-export PATH=${PATH}:${HOME}/bin:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:${M3_HOME}/bin
+export PATH=${HOME}/bin:${HOME}/src/depot_tools:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:${M3_HOME}/bin:/usr/java/default/bin:/usr/local/plt/bin:/usr/local/dmd/linux/bin:${PATH}
 
 # 2011/05/16
 alias grep='grep --color'
