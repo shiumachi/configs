@@ -62,9 +62,6 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 # 2009/01/24
 alias xhtags='htags -gsanohITv'
 
-# 2009/07/12
-# 2010/05/11 add depot_tools
-# 2010/08/02 Sun Java
 export PATH=/usr/java/default/bin:${PATH}:/usr/local/plt/bin:/usr/local/dmd/linux/bin:~/src/depot_tools
 
 
