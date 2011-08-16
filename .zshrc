@@ -146,3 +146,4 @@ alias ..4='../../../..'
 alias ..5='../../../../..'
 alias ..6='../../../../../..'
 
+alias git-log-graph='git log --pretty=format:"%h %ar: %s" --graph'
