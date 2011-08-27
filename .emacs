@@ -103,3 +103,7 @@
         (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
         (".*monaco-bold-.*-mac-roman" . 0.9)
         ("-cdac$" . 1.3))))
+
+;; macosx 用設定
+;; http://d.hatena.ne.jp/Watson/20100207/1265476938
+(define-key global-map [?,A%] [?\\])  ;; ,A%の代わりにバックスラッシュを入力する
