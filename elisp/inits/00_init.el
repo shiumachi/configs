@@ -91,7 +91,7 @@
 (setq recentf-auto-cleanup 'never)
 
 ;; http://www.bookshelf.jp/soft/meadow_23.html
-(setq recentf-max-saved-items 100)
+(setq recentf-max-saved-items 1000)
 
 ;; 略語定義ファイルの読み込み
 ;; ~/elisp/.abbrev_defsが存在していなかったら読み込まない
