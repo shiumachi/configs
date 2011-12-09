@@ -19,10 +19,10 @@
 
 # Package
 rhel.4.5.package
-*.tgz
-*.gz
-*.tar
-*.bz2
+# *.tgz
+# *.gz
+# *.tar
+# *.bz2
 
 # etc
 *.core
