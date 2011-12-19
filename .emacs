@@ -107,3 +107,6 @@
 ;; macosx 用設定
 ;; http://d.hatena.ne.jp/Watson/20100207/1265476938
 (define-key global-map [?,A%] [?\\])  ;; ,A%の代わりにバックスラッシュを入力する
+
+;; http://d.hatena.ne.jp/bander/20080321/p4
+(global-set-key [mouse-1] 'browse-url-at-mouse)
