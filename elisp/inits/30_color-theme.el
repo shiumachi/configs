@@ -6,6 +6,10 @@
 ;; カラーテーマ用
 ;; http://blog.mizoshiri.com/archives/50
 ;; http://www.emacswiki.org/cgi-bin/wiki/ColorTheme
+
+;; color-theme チェック用サイト
+;; http://color-theme-select.heroku.com/
+
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-renegade)
