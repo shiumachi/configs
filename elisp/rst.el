@@ -2492,7 +2492,7 @@ brings the cursor in that section."
         (delete-region (point-min) (point-max))
         (insert (format "Table of Contents: %s\n" (or (caar sectree) "")))
         (put-text-property (point-min) (point)
-                           'face (list '(background-color . "gray")))
+                           'face (list '(background-color . "grey")))
         (rst-toc-node sectree 0)
 
 	;; Count the lines to our found node.
@@ -3235,7 +3235,7 @@ general but you do not like the details."
   :group 'rst-faces-defaults
   :type '(integer)
   :set 'rst-set-level-default)
-(defcustom rst-level-face-base-color "grey"
+(defcustom rst-level-face-base-color "black"
   "Base name of the color for creating background colors in section title faces."
   :group 'rst-faces-defaults
   :type '(string)
