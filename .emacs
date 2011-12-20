@@ -110,3 +110,15 @@
 
 ;; http://d.hatena.ne.jp/bander/20080321/p4
 (global-set-key [mouse-1] 'browse-url-at-mouse)
+
+;; http://d.hatena.ne.jp/ymotongpoo/20101106/1289007403
+;; Emacs$AFp$(GY/Uk$A$K(Brst.el$A$r$BFI$A$_$B9~$A$_(B
+(require 'rst)
+;; $(I)/$(GZ/$AWS$N(B*.rst, *.rest$A$N%U%!%$%k$r(Brst-mode$A$G$(Gbd$A$/(B
+(setq auto-mode-alist
+      (append '(("\\.rst$" . rst-mode)
+		("\\.rest$" . rst-mode)) auto-mode-alist))
+;; $A13>0$,$(I9k$A$$$(G^[$A:O$O$3$&$7$J$$$H$(GKD$A3v$7$,$(GKD$A$E$i$$(B
+(setq frame-background-mode 'dark)
+;; $AH+2?%9%Z$B!<$A%9$G%$%s%G%s%H$7$^$7$g$&(B
+(add-hook 'rst-mode-hook '(lambda() (setq indent-tabs-mode nil)))
