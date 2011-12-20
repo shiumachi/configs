@@ -8,5 +8,4 @@
 ;; http://www.emacswiki.org/cgi-bin/wiki/ColorTheme
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-clarity)
-
+(color-theme-renegade)
