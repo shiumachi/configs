@@ -3235,7 +3235,7 @@ general but you do not like the details."
   :group 'rst-faces-defaults
   :type '(integer)
   :set 'rst-set-level-default)
-(defcustom rst-level-face-base-color "black"
+(defcustom rst-level-face-base-color "gray"
   "Base name of the color for creating background colors in section title faces."
   :group 'rst-faces-defaults
   :type '(string)
