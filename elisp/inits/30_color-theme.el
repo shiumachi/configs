@@ -12,4 +12,4 @@
 
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-renegade)
+(color-theme-clarity)
