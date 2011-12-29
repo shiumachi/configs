@@ -143,6 +143,7 @@ alias ..5='../../../../..'
 alias ..6='../../../../../..'
 
 alias git-log-graph='git log --pretty=format:"%h %ar: %s" --graph'
+alias git-sdiff='git diff --no-prefix'
 
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
@@ -150,3 +151,4 @@ export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 export ANT_HOME=/usr/share/ant
 
 export LD_LIBRARY_PATH=/usr/local/Cellar/protobuf/2.4.1/lib:${LD_LIBRARY_PATH}
+
