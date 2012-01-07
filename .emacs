@@ -1,6 +1,7 @@
 ;; 2008/9/16
 ;; ;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
 (add-to-list 'load-path "~/elisp/")
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 
 ;; 2010/12/30
 ;; http://tech.kayac.com/archive/divide-dot-emacs.html
