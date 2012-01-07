@@ -4,7 +4,6 @@
 
 ;; 2010/04/29
 ;; http://d.hatena.ne.jp/gom68/20090524/1243170341
-(add-to-list 'load-path "~/elisp/magit/share/emacs/site-lisp/")
 (require 'magit)
 (global-set-key "\C-cg" 'magit-status)
 
