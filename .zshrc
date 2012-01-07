@@ -133,7 +133,7 @@ export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
 export M3_HOME=/usr/local/Cellar/maven/3.0.3
 
-export PATH=${HOME}/bin:${HOME}/src/depot_tools:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:${M3_HOME}/bin:/usr/java/default/bin:/usr/local/plt/bin:/usr/local/dmd/linux/bin:/usr/local/share/python:/usr/local/bin:${PATH}
+export PATH=${HOME}/bin:${HOME}/src/depot_tools:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:${M3_HOME}/bin:/usr/java/default/bin:/usr/local/plt/bin:/usr/local/dmd/linux/bin:/usr/local/share/python:/usr/local/bin:/usr/local/texlive/2011/bin/universal-darwin:${PATH}
 
 # 2011/05/16
 alias grep='grep --color'
