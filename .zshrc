@@ -123,6 +123,8 @@ alias screen='screen -U -D -RR'
 # 2011/04/15
 # Hadoop Settings
 export HADOOP_HOME=${HOME}/lib/hadoop
+export HADOOP_CONF_DIR=${HADOOP_HOME}/conf
+
 export HBASE_HOME=${HOME}/lib/hbase
 export ZOOKEEPER_HOME=${HOME}/lib/zookeeper
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
