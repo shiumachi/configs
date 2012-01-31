@@ -154,3 +154,4 @@ export ANT_HOME=/usr/share/ant
 
 export LD_LIBRARY_PATH=/usr/local/Cellar/protobuf/2.4.1/lib:${LD_LIBRARY_PATH}
 
+export DL=${HOME}/Downloads
