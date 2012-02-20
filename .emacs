@@ -144,3 +144,10 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(rst-level-face-base-light 50))
+
+;; $A6@WTJK$(ILT(B
+;; $A1XR*$J%U%!%$%k$OH+$F(Brst-mode$A$G$(Gbd$A$/(B
+(setq auto-mode-alist
+      (append '(
+		("memo.txt$" . rst-mode)
+		) auto-mode-alist))
