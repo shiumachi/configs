@@ -155,3 +155,7 @@ export ANT_HOME=/usr/share/ant
 export LD_LIBRARY_PATH=/usr/local/Cellar/protobuf/2.4.1/lib:${LD_LIBRARY_PATH}
 
 export DL=${HOME}/Downloads
+
+export HBASE_JAR_PATH=`ls -1 ${HBASE_HOME}/hbase-*[^s].jar`
+export ZOOKEEPER_JAR_PATH=`ls -1 ${ZOOKEEPER_HOME}/zookeeper-*.jar`
+export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${ZOOKEEPER_JAR_PATH}:${HADOOP_CLASSPATH}
