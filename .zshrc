@@ -160,3 +160,6 @@ export HBASE_JAR_PATH=`ls -1 ${HBASE_HOME}/hbase-*[^s].jar`
 export HBASE_LIB_PATH=${HBASE_HOME}/lib
 export ZOOKEEPER_JAR_PATH=`ls -1 ${ZOOKEEPER_HOME}/zookeeper-*.jar`
 export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH}:${HADOOP_CLASSPATH}
+
+# virtualenv setting
+export VIRTUALENV_USE_DISTRIBUTE=true
