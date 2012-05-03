@@ -163,3 +163,8 @@ export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH
 
 # virtualenv setting
 export VIRTUALENV_USE_DISTRIBUTE=true
+
+if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/share/python/virtualenvwrapper.sh
+fi
