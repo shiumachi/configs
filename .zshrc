@@ -133,7 +133,18 @@ export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
 export M3_HOME=/usr/local/Cellar/maven/3.0.3
 
-export PATH=${HOME}/bin:${HOME}/src/depot_tools:${HADOOP_HOME}/bin:${HBASE_HOME}/bin:${HIVE_HOME}/bin:${M3_HOME}/bin:/usr/java/default/bin:/usr/local/plt/bin:/usr/local/dmd/linux/bin:/usr/local/share/python:/usr/local/bin:/usr/local/texlive/2011/bin/universal-darwin:${PATH}
+
+export PATH=${PATH}:${HOME}/bin
+export PATH=${PATH}:${HOME}/src/depot_tools
+export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
+export PATH=${PATH}:${HBASE_HOME}/bin
+export PATH=${PATH}:${HIVE_HOME}/bin
+export PATH=${PATH}:${M3_HOME}/bin
+export PATH=${PATH}:/usr/java/default/bin
+export PATH=${PATH}:/usr/local/plt/bin
+export PATH=${PATH}:/usr/local/dmd/linux/bin
+export PATH=${PATH}:/usr/local/share/python
+export PATH=${PATH}:/usr/local/texlive/2011/bin/universal-darwin
 
 # 2011/05/16
 alias grep='grep --color'
@@ -162,9 +173,11 @@ export ZOOKEEPER_JAR_PATH=`ls -1 ${ZOOKEEPER_HOME}/zookeeper-*.jar`
 export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH}:${HADOOP_CLASSPATH}
 
 # virtualenv setting
+
 export VIRTUALENV_USE_DISTRIBUTE=true
 
 if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
     export WORKON_HOME=$HOME/.virtualenvs
     source /usr/local/share/python/virtualenvwrapper.sh
 fi
