@@ -131,14 +131,17 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export HIVE_HOME=${HOME}/lib/hive
 export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
-export M3_HOME=/usr/local/Cellar/maven/3.0.3
+export PIG_HOME=${HOME}/lib/pig
+export PIG_CLASSPATH=${HADOOP_CONF_DIR}
 
+export M3_HOME=/usr/local/Cellar/maven/3.0.3
 
 export PATH=${PATH}:${HOME}/bin
 export PATH=${PATH}:${HOME}/src/depot_tools
 export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
 export PATH=${PATH}:${HBASE_HOME}/bin
 export PATH=${PATH}:${HIVE_HOME}/bin
+export PATH=${PATH}:${PIG_HOME}/bin
 export PATH=${PATH}:${M3_HOME}/bin
 export PATH=${PATH}:/usr/java/default/bin
 export PATH=${PATH}:/usr/local/plt/bin
