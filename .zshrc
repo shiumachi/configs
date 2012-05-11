@@ -121,6 +121,7 @@ export PIG_CLASSPATH=${HADOOP_CONF_DIR}
 
 export M3_HOME=/usr/local/Cellar/maven/3.0.3
 
+export PATH=/usr/local/bin:${PATH}
 export PATH=${PATH}:${HOME}/bin
 export PATH=${PATH}:${HOME}/src/depot_tools
 export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
@@ -180,7 +181,6 @@ export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH
 # virtualenv setting
 
 export VIRTUALENV_USE_DISTRIBUTE=true
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
 
 if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
