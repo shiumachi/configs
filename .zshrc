@@ -147,7 +147,18 @@ alias git-log-graph='git log --pretty=format:"%h %ar: %s" --graph'
 alias git-sdiff='git diff --no-prefix'
 
 export LESS='-R'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+
+if [ -f /usr/local/bin/src-hilite-lesspipe.sh ]; then
+    LESSPIPE_SH=/usr/local/bin/src-hilite-lesspipe.sh
+    export LESSOPEN="| ${LESSPIPE_SH} %s"
+elif [ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]; then
+    LESSPIPE_SH=/usr/share/source-highlight/src-hilite-lesspipe.sh
+    export LESSOPEN="| ${LESSPIPE_SH} %s"
+else
+    echo "ERROR: src-hilite-lesspipe.sh not found"
+    echo "please install source-highlight package (sudo aptitude -y install source-highlight, or sudo yum install source-highlight)"
+    export LESSOPEN=""
+fi
 
 export ANT_HOME=/usr/share/ant
 
