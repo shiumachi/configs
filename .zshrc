@@ -105,6 +105,10 @@ alias screen='screen -U -D -RR'
 #ディレクトリスタックに重複して記録しない
 #setopt pushd_ignore_dups
 
+# Java Settings
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
+
 # Hadoop Settings
 export HADOOP_HOME=${HOME}/lib/hadoop
 export HADOOP_PREFIX=${HADOOP_HOME} # for Hadoop 1.x, 2.x
@@ -112,7 +116,6 @@ export HADOOP_CONF_DIR=${HADOOP_HOME}/conf
 
 export HBASE_HOME=${HOME}/lib/hbase
 export ZOOKEEPER_HOME=${HOME}/lib/zookeeper
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export HIVE_HOME=${HOME}/lib/hive
 export HIVE_CONF_DIR=${HIVE_HOME}/conf
 
