@@ -112,7 +112,14 @@ export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 # Hadoop Settings
 export HADOOP_HOME=${HOME}/lib/hadoop
 export HADOOP_PREFIX=${HADOOP_HOME} # for Hadoop 1.x, 2.x
+
+export HADOOP_MAPRED_HOME=${HADOOP_HOME}/share/hadoop/mapreduce
+export HADOOP_COMMON_HOME=${HADOOP_HOME}
+export HADOOP_HDFS_HOME=${HADOOP_HOME}
+export YARN_HOME=${HADOOP_HOME}
+
 export HADOOP_CONF_DIR=${HADOOP_HOME}/conf
+export YARN_CONF_DIR=${HADOOP_CONF_DIR}
 
 export HBASE_HOME=${HOME}/lib/hbase
 export ZOOKEEPER_HOME=${HOME}/lib/zookeeper
