@@ -3,6 +3,8 @@
 (add-to-list 'load-path "~/elisp/")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 
+;; auto-install.el
+;; http://d.hatena.ne.jp/higepon/20120219/1329636071
 (require 'auto-install)
 (setq auto-install-directory "~/configs/elisp/auto-install/")
 (add-to-list 'load-path "~/configs/elisp/auto-install/")
@@ -155,3 +157,5 @@
       (append '(
 		("memo.txt$" . rst-mode)
 		) auto-mode-alist))
+
+
