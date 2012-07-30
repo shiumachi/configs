@@ -63,6 +63,9 @@ alias xhtags='htags -gsanohITv'
 # 2010/06/20
 export PYTHONPATH=~/lib/python
 
+# for jython
+export JYTHONPATH=~/lib/python
+
 # 2010/09/12
 # http://d.hatena.ne.jp/mig50/20060730/1154269832
 PROMPT="%{[32m%}%n@%m%{[35m%}${WINDOW:+[$WINDOW]} %{[33m%}%(4~,%-1~/.../%3~,%~)%{[m%} %# "
