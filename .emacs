@@ -3,6 +3,10 @@
 (add-to-list 'load-path "~/elisp/")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 
+(require 'auto-install)
+(setq auto-install-directory "~/configs/elisp/auto-install/")
+(add-to-list 'load-path "~/configs/elisp/auto-install/")
+
 ;; 2010/12/30
 ;; http://tech.kayac.com/archive/divide-dot-emacs.html
 ;; for separate dotfile
