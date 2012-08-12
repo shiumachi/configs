@@ -31,7 +31,8 @@
 (setq completion-ignore-case t)
 
 ;; 強力な補完機能を使う
-(partial-completion-mode 1)
+;; Emacs24 では動かないのでコメントアウト
+;;(partial-completion-mode 1)
 
 ;; 補完可能なものを随時表示
 ;; 少しうるさい
