@@ -201,3 +201,6 @@ if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
 elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
+
+# default python environment
+workon develop
