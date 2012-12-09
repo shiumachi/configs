@@ -188,3 +188,7 @@
 ;;(when (functionp 'cygstart)
 ;;  (global-set-key [(control c) (control f)] 'cygstart))
 ;;
+
+
+;; Go $AQT$(Gk#$ASC(B
+(require 'go-mode)
