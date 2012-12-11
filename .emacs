@@ -192,3 +192,6 @@
 
 ;; Go $AQT$(Gk#$ASC(B
 (require 'go-mode)
+
+;; lisp $ASC(B
+(setq inferior-lisp-program "clisp")
