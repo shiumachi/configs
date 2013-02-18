@@ -199,3 +199,9 @@ fi
 
 # default python environment
 workon develop
+
+# aws settings
+if [ -f ${HOME}/.ssh/aws1.pem ]; then
+    alias ssh-aws="ssh -i ${HOME}/.ssh/aws1.pem"
+    alias scp-aws="scp -i ${HOME}/.ssh/aws1.pem"
+fi
