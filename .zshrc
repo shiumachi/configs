@@ -58,11 +58,6 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 # 2009/01/24
 alias xhtags='htags -gsanohITv'
 
-
-
-# 2010/06/20
-export PYTHONPATH=~/lib/python
-
 # for jython
 export JYTHONPATH=~/lib/python
 
