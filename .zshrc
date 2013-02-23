@@ -65,8 +65,16 @@ alias xhtags='htags -gsanohITv'
 # some more ls aliases
 alias ls='ls -G'
 alias ll='ls -l'
+alias llh='ls -lh'
+alias lls='ls -lShr'
+alias llt='ls -lthr'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias dfh='df -h'
+
+alias dus='du -sh'
+alias durank='du | sort -nr | head -n 20'
 
 # 2011/01/09
 # screen
