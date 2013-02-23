@@ -55,16 +55,11 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 #         synergyc -f 192.168.0.1 &
 #fi
 
+#############################################
+###############    aliases    ###############
+#############################################
 # 2009/01/24
 alias xhtags='htags -gsanohITv'
-
-# for jython
-export JYTHONPATH=~/lib/python
-
-# 2010/09/12
-# http://d.hatena.ne.jp/mig50/20060730/1154269832
-PROMPT="%{[32m%}%n@%m%{[35m%}${WINDOW:+[$WINDOW]} %{[33m%}%(4~,%-1~/.../%3~,%~)%{[m%} %# "
-RPROMPT='%{[33m%}%h %{[36m%}%T%{[m%}'
 
 # http://d.hatena.ne.jp/jeneshicc/20090224/1235475290
 # some more ls aliases
@@ -72,6 +67,23 @@ alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+
+# 2011/01/09
+# screen
+# http://iandeth.dyndns.org/mt/ian/archives/000646.html
+alias screen='screen -U -D -RR'
+
+# 2011/05/16
+alias grep='grep --color'
+
+alias ..2='../..'
+alias ..3='../../..'
+alias ..4='../../../..'
+alias ..5='../../../../..'
+alias ..6='../../../../../..'
+
+alias git-log-graph='git log --pretty=format:"%h %ar: %s" --graph'
+alias git-sdiff='git diff --no-prefix'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -84,6 +96,27 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# aws settings
+if [ -f ${HOME}/.ssh/aws1.pem ]; then
+    alias ssh-aws="ssh -i ${HOME}/.ssh/aws1.pem"
+    alias scp-aws="scp -i ${HOME}/.ssh/aws1.pem"
+fi
+
+##############################################
+##############################################
+##############################################
+
+
+# for jython
+export JYTHONPATH=~/lib/python
+
+
+# 2010/09/12
+# http://d.hatena.ne.jp/mig50/20060730/1154269832
+PROMPT="%{[32m%}%n@%m%{[35m%}${WINDOW:+[$WINDOW]} %{[33m%}%(4~,%-1~/.../%3~,%~)%{[m%} %# "
+RPROMPT='%{[33m%}%h %{[36m%}%T%{[m%}'
+
+
 
 # http://d.hatena.ne.jp/tkng/20100712/1278896396
 # bind Ctrl + left/right as Alt + B/F
@@ -93,10 +126,6 @@ bindkey ";5D" backward-word
 # dont treat this characters as part of word
 export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 
-# 2011/01/09
-# screen
-# http://iandeth.dyndns.org/mt/ian/archives/000646.html
-alias screen='screen -U -D -RR'
 
 # 2011/02/09
 # http://d.hatena.ne.jp/rdera/20100107/1262868778
@@ -127,6 +156,8 @@ export HIVE_CONF_DIR=${HIVE_HOME}/conf
 export PIG_HOME=${HOME}/lib/pig
 export PIG_CLASSPATH=${HADOOP_CONF_DIR}
 
+export FLUME_HOME=${HOME}/lib/flume
+
 export M3_HOME=/usr/local/Cellar/maven/3.0.3
 
 export PATH=/usr/local/bin:${PATH}
@@ -136,6 +167,7 @@ export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
 export PATH=${PATH}:${HBASE_HOME}/bin
 export PATH=${PATH}:${HIVE_HOME}/bin
 export PATH=${PATH}:${PIG_HOME}/bin
+export PATH=${PATH}:${FLUME_HOME}/bin
 export PATH=${PATH}:${M3_HOME}/bin
 export PATH=${PATH}:/usr/java/default/bin
 export PATH=${PATH}:/usr/local/plt/bin
@@ -143,17 +175,6 @@ export PATH=${PATH}:/usr/local/dmd/linux/bin
 export PATH=${PATH}:/usr/local/share/python
 export PATH=${PATH}:/usr/local/texlive/2011/bin/universal-darwin
 
-# 2011/05/16
-alias grep='grep --color'
-
-alias ..2='../..'
-alias ..3='../../..'
-alias ..4='../../../..'
-alias ..5='../../../../..'
-alias ..6='../../../../../..'
-
-alias git-log-graph='git log --pretty=format:"%h %ar: %s" --graph'
-alias git-sdiff='git diff --no-prefix'
 
 export LESS='-R'
 
@@ -200,8 +221,3 @@ fi
 # default python environment
 workon develop
 
-# aws settings
-if [ -f ${HOME}/.ssh/aws1.pem ]; then
-    alias ssh-aws="ssh -i ${HOME}/.ssh/aws1.pem"
-    alias scp-aws="scp -i ${HOME}/.ssh/aws1.pem"
-fi
