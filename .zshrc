@@ -148,7 +148,7 @@ export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 export HADOOP_HOME=${HOME}/lib/hadoop
 export HADOOP_PREFIX=${HADOOP_HOME} # for Hadoop 1.x, 2.x
 
-export HADOOP_MAPRED_HOME=${HADOOP_HOME}/share/hadoop/mapreduce
+export HADOOP_MAPRED_HOME=${HADOOP_HOME}
 export HADOOP_COMMON_HOME=${HADOOP_HOME}
 export HADOOP_HDFS_HOME=${HADOOP_HOME}
 export YARN_HOME=${HADOOP_HOME}
@@ -213,7 +213,7 @@ if [ -d "${ZOOKEEPER_HOME}" ]; then
     export ZOOKEEPER_JAR_PATH=`ls -1 ${ZOOKEEPER_HOME}/zookeeper-*.jar`
 fi
 
-export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH}:${HADOOP_CLASSPATH}
+export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH}
 
 # virtualenv setting
 
