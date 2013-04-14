@@ -140,6 +140,8 @@ export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 #ディレクトリスタックに重複して記録しない
 #setopt pushd_ignore_dups
 
+export LESS='-R'
+
 # Java Settings
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
@@ -176,15 +178,22 @@ export PATH=${PATH}:${HBASE_HOME}/bin
 export PATH=${PATH}:${HIVE_HOME}/bin
 export PATH=${PATH}:${PIG_HOME}/bin
 export PATH=${PATH}:${FLUME_HOME}/bin
+export PATH=${PATH}:${ZOOKEEPER_HOME}/bin
 export PATH=${PATH}:${M3_HOME}/bin
 export PATH=${PATH}:/usr/java/default/bin
 export PATH=${PATH}:/usr/local/plt/bin
 export PATH=${PATH}:/usr/local/dmd/linux/bin
+export PATH=${PATH}:/usr/local/share/python3
 export PATH=${PATH}:/usr/local/share/python
 export PATH=${PATH}:/usr/local/texlive/2011/bin/universal-darwin
 
+export ANT_HOME=/usr/share/ant
 
-export LESS='-R'
+export LD_LIBRARY_PATH=/usr/local/Cellar/protobuf/2.4.1/lib:${LD_LIBRARY_PATH}
+
+export DL=${HOME}/Downloads
+
+
 
 if [ -f /usr/local/bin/src-hilite-lesspipe.sh ]; then
     LESSPIPE_SH=/usr/local/bin/src-hilite-lesspipe.sh
@@ -197,12 +206,6 @@ else
     echo "please install source-highlight package (sudo aptitude -y install source-highlight, or sudo yum install source-highlight)"
     export LESSOPEN=""
 fi
-
-export ANT_HOME=/usr/share/ant
-
-export LD_LIBRARY_PATH=/usr/local/Cellar/protobuf/2.4.1/lib:${LD_LIBRARY_PATH}
-
-export DL=${HOME}/Downloads
 
 if [ -d "${HBASE_HOME}" ]; then
     export HBASE_JAR_PATH=`ls -1 ${HBASE_HOME}/hbase-*[^s].jar`
@@ -219,9 +222,10 @@ export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH
 
 export VIRTUALENV_USE_DISTRIBUTE=true
 export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
-if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
+if [ -f /usr/local/share/python3/virtualenvwrapper.sh ]; then
+    source /usr/local/share/python3/virtualenvwrapper.sh
 elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
