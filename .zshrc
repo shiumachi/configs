@@ -236,3 +236,6 @@ workon develop
 # EC2 Settings
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
+
+# Go Setings
+export GOROOT=/usr/local/Cellar/go/1.1.2
