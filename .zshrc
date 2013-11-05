@@ -239,3 +239,6 @@ export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
 
 # Go Setings
 export GOROOT=/Users/sho/src/go
+
+# autopep8
+alias autopep8='autopep8 -r -i --max-line-length=120'
