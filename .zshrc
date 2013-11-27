@@ -186,6 +186,8 @@ export PATH=${PATH}:/usr/local/dmd/linux/bin
 export PATH=${PATH}:/usr/local/share/python3
 export PATH=${PATH}:/usr/local/share/python
 export PATH=${PATH}:/usr/local/texlive/2011/bin/universal-darwin
+#git
+export PATH=${PATH}:/usr/local/Cellar/git/1.8.4//share/git-core/contrib/diff-highlight
 
 export ANT_HOME=/usr/share/ant
 
