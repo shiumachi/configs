@@ -244,3 +244,9 @@ export GOROOT=/Users/sho/src/go
 
 # autopep8
 alias autopep8='autopep8 -r -i --max-line-length=120'
+
+# review
+export PATH=${PATH}:${HOME}/src/review/bin
+
+# ag
+alias ag='ag --color'
