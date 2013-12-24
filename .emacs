@@ -222,3 +222,27 @@
 ;;  (add-to-list 'flymake-allowed-file-name-masks
 ;;               '("\\.py\\'" flymake-pyflakes-init)))
 ;;(load-library "flymake-cursor")
+
+(add-to-list 'load-path "~/elisp/ess-13.09/lisp")
+(require 'ess-site)
+
+;(set-default-font "-adobe-courier-bold-r-normal--*-140-*-*-m-*-iso8859-1")
+;(global-font-lock-mode t)                                        ; S/R   TeX
+;(set-face-foreground 'font-lock-comment-face       "Firebrick")  ; #com  %com
+;(set-face-foreground 'font-lock-string-face         "SeaGreen")  ; "str" "str"
+;(set-face-foreground 'font-lock-keyword-face      "MediumBlue")  ; if    \end
+;(set-face-foreground 'font-lock-constant-face      "VioletRed")  ; fun<- {ctr}
+;(set-face-foreground 'font-lock-type-face      "DarkGoldenrod")  ; T,F    ?
+;(set-face-foreground 'font-lock-variable-name-face      "Blue")  ; xv
+;
+;(set-face-foreground 'font-lock-function-name-face "VioletRed")  ; <-    {eq1}
+
+;;(setq auto-mode-alist
+;;     (cons (cons "\\.[rR]$" 'r-mode) auto-mode-alist))
+;;(autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
+;;(setq auto-mode-alist (cons '("\\.R$" . r-mode) auto-mode-alist))
+
+
+(setq auto-mode-alist
+      (append '((".R$" . r-mode)) auto-mode-alist)
+      )
