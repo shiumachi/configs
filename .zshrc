@@ -224,12 +224,16 @@ export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH
 
 export VIRTUALENV_USE_DISTRIBUTE=true
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
-if [ -f /usr/local/share/python3/virtualenvwrapper.sh ]; then
-    source /usr/local/share/python3/virtualenvwrapper.sh
-elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
+# pleage change to python3 if you want to use it
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+
+#if [ -f /usr/local/share/python3/virtualenvwrapper.sh ]; then
+#    source /usr/local/share/python3/virtualenvwrapper.sh
+#fi
+
+if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+    source /usr/local/share/python/virtualenvwrapper.sh
 fi
 
 # default python environment
