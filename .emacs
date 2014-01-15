@@ -246,3 +246,15 @@
 (setq auto-mode-alist
       (append '((".R$" . r-mode)) auto-mode-alist)
       )
+
+;; Clozure CL$A$r%G%U%)%k%H$N(BCommon Lisp$B=h$A@mO5$K$(G]C$A6((B
+(setq inferior-lisp-program "ccl")
+;; ~/.emacs.d/slime$A$r(Bload-path$A$KW7<S(B
+(add-to-list 'load-path (expand-file-name "~/configs/elisp/slime"))
+;; SLIME$A$N%m$B!<$A%I(B
+(require 'slime)
+(slime-setup '(slime-repl slime-fancy slime-banner))
+
+
+(require 'auto-complete-config)
+(ac-config-default)
