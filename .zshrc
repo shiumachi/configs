@@ -183,8 +183,8 @@ export PATH=${PATH}:${M3_HOME}/bin
 export PATH=${PATH}:/usr/java/default/bin
 export PATH=${PATH}:/usr/local/plt/bin
 export PATH=${PATH}:/usr/local/dmd/linux/bin
-export PATH=${PATH}:/usr/local/share/python3
-export PATH=${PATH}:/usr/local/share/python
+#export PATH=${PATH}:/usr/local/share/python3
+#export PATH=${PATH}:/usr/local/share/python
 export PATH=${PATH}:/usr/local/texlive/2011/bin/universal-darwin
 #git
 export PATH=${PATH}:/usr/local/Cellar/git/1.8.4//share/git-core/contrib/diff-highlight
@@ -237,7 +237,7 @@ if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
 fi
 
 # default python environment
-workon develop
+#workon develop
 
 # EC2 Settings
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
@@ -254,3 +254,11 @@ export PATH=${PATH}:${HOME}/src/review/bin
 
 # ag
 alias ag='ag --color'
+
+# pyenv
+# http://qiita.com/la_luna_azul/items/3f64016feaad1722805c
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+fi
