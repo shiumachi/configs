@@ -203,6 +203,9 @@ if [ -f /usr/local/bin/src-hilite-lesspipe.sh ]; then
 elif [ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]; then
     LESSPIPE_SH=/usr/share/source-highlight/src-hilite-lesspipe.sh
     export LESSOPEN="| ${LESSPIPE_SH} %s"
+elif [ -f /usr/local/Cellar/source-highlight/3.1.7/bin/src-hilite-lesspipe.sh ]; then
+    LESSPIPE_SH=/usr/local/Cellar/source-highlight/3.1.7/bin/src-hilite-lesspipe.sh
+    export LESSOPEN="| ${LESSPIPE_SH} %s"
 else
     echo "ERROR: src-hilite-lesspipe.sh not found"
     echo "please install source-highlight package (sudo aptitude -y install source-highlight, or sudo yum install source-highlight)"
