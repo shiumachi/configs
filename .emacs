@@ -289,4 +289,17 @@
       '(lambda ()
         (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-
+;; http://moya-notes.blogspot.jp/2013/02/emacs24-config-on-mac.html#bg
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; [$A;y1>(B] $A13>0I+!$M8$(Gg4(B
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; $A13>0I+$(G]C$A6((B
+(custom-set-faces
+ '(default ((t (:background "#000022" :foreground "#EEEEEE"))))
+ '(cursor (
+           (((class color) (background dark )) (:background "#00AA00"))
+           (((class color) (background light)) (:background "#999999"))
+           (t ())
+           )))
+;; $A%U%l$B!<$A%`M8$(Gg4]C$A6((B
+(add-to-list 'default-frame-alist '(alpha . (0.75 0.75)))
