@@ -265,3 +265,11 @@ if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
 fi
+
+
+# perlbrew
+PERLBREW_SRC="${HOME}/perl5/perlbrew/etc/bashrc"
+if [ -f ${PERLBREW_SRC} ]; then
+    source ${PERLBREW_SRC}
+    perlbrew use perl-5.16.2
+fi
