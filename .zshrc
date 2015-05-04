@@ -143,7 +143,7 @@ export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 export LESS='-R'
 
 # Java Settings
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export JAVA_HOME=`/usr/libexec/java_home`
 export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 # Hadoop Settings
@@ -260,8 +260,8 @@ alias ag='ag --color'
 
 # pyenv
 # http://qiita.com/la_luna_azul/items/3f64016feaad1722805c
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
-    eval "$(pyenv init -)"
-fi
+#export PYENV_ROOT="${HOME}/.pyenv"
+#if [ -d "${PYENV_ROOT}" ]; then
+#    export PATH=${PYENV_ROOT}/bin:$PATH
+#    eval "$(pyenv init -)"
+#fi
