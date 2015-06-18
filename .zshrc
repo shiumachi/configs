@@ -48,13 +48,6 @@ setopt list_packed
 # colored ls completion 
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-# 2008/12/14
-#ping -c 1 -w 1 192.168.0.1 &> /dev/null
-#if [ 0 -eq $? -a 0 -eq `ps aux | grep synergy | grep -v grep | wc -l` ];
-#then
-#         synergyc -f 192.168.0.1 &
-#fi
-
 #############################################
 ###############    aliases    ###############
 #############################################
