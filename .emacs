@@ -11,6 +11,8 @@
 ;; 初期化
 (package-initialize)
 
+(setq package-user-dir "~/elisp/elpa/")
+
 ;; 2008/9/16
 ;; ;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
 (add-to-list 'load-path "~/elisp/")
