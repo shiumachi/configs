@@ -9,15 +9,14 @@
 (add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;; 初期化
+(setq package-user-dir "~/elisp/elpa/")
 (package-initialize)
 
-(setq package-user-dir "~/elisp/elpa/")
 
 ;; 2008/9/16
 ;; ;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
 (add-to-list 'load-path "~/elisp/")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
-
 
 ;; auto-install.el
 ;; http://d.hatena.ne.jp/higepon/20120219/1329636071
