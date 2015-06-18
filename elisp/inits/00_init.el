@@ -18,9 +18,6 @@
 ;; 対応する括弧を光らせる。
 (show-paren-mode t)
 
-;; 色を付ける
-;; '(global-font-lock-mode t)
-
 ;; スタートアップスクリーンを表示しない
 (setq inhibit-startup-screen t)
 
@@ -29,10 +26,6 @@
 
 ;; 補完時に大文字小文字を区別しない
 (setq completion-ignore-case t)
-
-;; 強力な補完機能を使う
-;; Emacs24 では動かないのでコメントアウト
-;;(partial-completion-mode 1)
 
 ;; 補完可能なものを随時表示
 ;; 少しうるさい
@@ -44,9 +37,6 @@
 ;; スクロールを一行ずつにする
 (setq scroll-step 1)
 
-;; スクロールバーを右側に表示する
-;;(set-scroll-bar-mode 'right)
-
 ;; 行の先頭でC-kを一回押すだけで行全体を消去する
 (setq kill-whole-line t)
 
@@ -55,14 +45,6 @@
 
 ;; 最終行に必ず一行挿入する
 (setq require-final-newline t)
-
-;; 一行が 80 字以上になった時には自動改行する
-;; テキストモードのみ
-;;(add-hook 'text-mode-hook
-;;	  '(lambda()
-;;	     (setq fill-column 80)
-;;	     (auto-fill-mode t)
-;;	     ))
 
 ;; 圧縮されたファイルも編集できるようにする
 (auto-compression-mode t)
@@ -144,10 +126,6 @@
 ;; http://www.bookshelf.jp/soft/meadow_24.html#SEC263
 (require 'saveplace)
 (setq-default save-place t)
-
-;; 2008/12/20
-;; http://d.hatena.ne.jp/mzp/20081207/autoerase
-;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; http://at-aka.blogspot.com/2006/04/emacs-ispell.html
 ;; 辞書補完機能
