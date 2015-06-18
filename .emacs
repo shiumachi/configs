@@ -1,7 +1,21 @@
+; package.el
+; http://emacs-jp.github.io/packages/package-management/package-el.html
+;; http://d.hatena.ne.jp/syohex/20130624/1372082597
+(require 'package)
+;; MELPA$A$rW7<S(B
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+;; Marmalade$A$rW7<S(B
+(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+;; $A3uFZ;/(B
+(package-initialize)
+
 ;; 2008/9/16
 ;; ;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
 (add-to-list 'load-path "~/elisp/")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+
 
 ;; auto-install.el
 ;; http://d.hatena.ne.jp/higepon/20120219/1329636071
@@ -317,17 +331,6 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-; package.el
-; http://emacs-jp.github.io/packages/package-management/package-el.html
-(require 'package)
-;; MELPA$A$rW7<S(B
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-
-;; Marmalade$A$rW7<S(B
-(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
-
-;; $A3uFZ;/(B
-(package-initialize)
 
 
 ; Scala $(G]C$A6((B
