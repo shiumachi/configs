@@ -90,18 +90,18 @@
  (set-face-attribute 'default nil
                      :family "monaco"
                      :height 140)
-;; (set-fontset-font
-;;  (frame-parameter nil 'font)
-;;  'japanese-jisx0208
-;;  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
-;; (set-fontset-font
-;;  (frame-parameter nil 'font)
-;;  'japanese-jisx0212
-;;  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
-;; (set-fontset-font
-;;  (frame-parameter nil 'font)
-;;  'mule-unicode-0100-24ff
-;;  '("monaco" . "iso10646-1"))
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'japanese-jisx0208
+  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'japanese-jisx0212
+  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+ (set-fontset-font
+  (frame-parameter nil 'font)
+  'mule-unicode-0100-24ff
+  '("monaco" . "iso10646-1"))
  (setq face-font-rescale-alist
       '(("^-apple-hiragino.*" . 1.2)
         (".*osaka-bold.*" . 1.2)
