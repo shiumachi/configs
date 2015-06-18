@@ -71,21 +71,6 @@
 ;; for waf
 (setq auto-mode-alist (cons '("wscript" . python-mode) auto-mode-alist))
 
-;; 2010/10/25
-;; cscope
-;; http://namikister.blog101.fc2.com/blog-entry-9.html
-;; (require 'xcscope)
-
-
-;;2007/11/5
-;;Emacs で C 言語プログラミングを始める人へのイントロダクション
-;;flyspell-prog-mode(自動ispell機能)
-;;(add-hook 'c-mode-common-hook
-;;          '(lambda ()
-;;             ;; flyspell-prog-mode をオンにする
-;;             (flyspell-prog-mode)
-;;))
-
 (desktop-save-mode t)
 
 ;; 2011/04/06
