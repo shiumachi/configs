@@ -146,52 +146,22 @@ export LESS='-R'
 export JAVA_HOME=`/usr/libexec/java_home`
 export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
-# Hadoop Settings
-export HADOOP_HOME=${HOME}/lib/hadoop
-export HADOOP_PREFIX=${HADOOP_HOME} # for Hadoop 1.x, 2.x
-
-export HADOOP_MAPRED_HOME=${HADOOP_HOME}
-export HADOOP_COMMON_HOME=${HADOOP_HOME}
-export HADOOP_HDFS_HOME=${HADOOP_HOME}
-export YARN_HOME=${HADOOP_HOME}
-
-export HADOOP_CONF_DIR=${HADOOP_HOME}/conf
-export YARN_CONF_DIR=${HADOOP_CONF_DIR}
-
-export HBASE_HOME=${HOME}/lib/hbase
-export ZOOKEEPER_HOME=${HOME}/lib/zookeeper
-export HIVE_HOME=${HOME}/lib/hive
-export HIVE_CONF_DIR=${HIVE_HOME}/conf
-
-export PIG_HOME=${HOME}/lib/pig
-export PIG_CLASSPATH=${HADOOP_CONF_DIR}
-
-export FLUME_HOME=${HOME}/lib/flume
-
-export M3_HOME=/usr/local/Cellar/maven/3.0.3
-
+#export M3_HOME=/usr/local/Cellar/maven/3.0.3
+#export PATH=${PATH}:${M3_HOME}/bin
+#export ANT_HOME=/usr/share/ant
+#
 export PATH=/usr/local/bin:${PATH}
 export PATH=${PATH}:${HOME}/bin
 export PATH=${PATH}:${HOME}/src/depot_tools
-export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
-export PATH=${PATH}:${HBASE_HOME}/bin
-export PATH=${PATH}:${HIVE_HOME}/bin
-export PATH=${PATH}:${PIG_HOME}/bin
-export PATH=${PATH}:${FLUME_HOME}/bin
-export PATH=${PATH}:${ZOOKEEPER_HOME}/bin
-export PATH=${PATH}:${M3_HOME}/bin
-export PATH=${PATH}:/usr/java/default/bin
 export PATH=${PATH}:/usr/local/plt/bin
 export PATH=${PATH}:/usr/local/dmd/linux/bin
+#export PATH=${PATH}:/usr/java/default/bin
 #export PATH=${PATH}:/usr/local/share/python3
 #export PATH=${PATH}:/usr/local/share/python
 export PATH=${PATH}:/usr/local/texlive/2011/bin/universal-darwin
 #git
 export PATH=${PATH}:/usr/local/share/git-core/contrib/diff-highlight
 
-export ANT_HOME=/usr/share/ant
-
-export LD_LIBRARY_PATH=/usr/local/Cellar/protobuf/2.4.1/lib:${LD_LIBRARY_PATH}
 
 export DL=${HOME}/Downloads
 
