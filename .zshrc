@@ -182,16 +182,6 @@ else
     export LESSOPEN=""
 fi
 
-if [ -d "${HBASE_HOME}" ]; then
-    export HBASE_JAR_PATH=`ls -1 ${HBASE_HOME}/hbase-*[^s].jar`
-    export HBASE_LIB_PATH=${HBASE_HOME}/lib
-fi
-
-if [ -d "${ZOOKEEPER_HOME}" ]; then
-    export ZOOKEEPER_JAR_PATH=`ls -1 ${ZOOKEEPER_HOME}/zookeeper-*.jar`
-fi
-
-export HADOOP_CLASSPATH=${HBASE_JAR_PATH}:${HBASE_LIB_PATH}:${ZOOKEEPER_JAR_PATH}
 
 # virtualenv setting
 
