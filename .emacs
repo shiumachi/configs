@@ -90,18 +90,18 @@
  (set-face-attribute 'default nil
                      :family "monaco"
                      :height 140)
- (set-fontset-font
-  (frame-parameter nil 'font)
-  'japanese-jisx0208
-  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
- (set-fontset-font
-  (frame-parameter nil 'font)
-  'japanese-jisx0212
-  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
- (set-fontset-font
-  (frame-parameter nil 'font)
-  'mule-unicode-0100-24ff
-  '("monaco" . "iso10646-1"))
+;; (set-fontset-font
+;;  (frame-parameter nil 'font)
+;;  'japanese-jisx0208
+;;  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+;; (set-fontset-font
+;;  (frame-parameter nil 'font)
+;;  'japanese-jisx0212
+;;  '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+;; (set-fontset-font
+;;  (frame-parameter nil 'font)
+;;  'mule-unicode-0100-24ff
+;;  '("monaco" . "iso10646-1"))
  (setq face-font-rescale-alist
       '(("^-apple-hiragino.*" . 1.2)
         (".*osaka-bold.*" . 1.2)
@@ -303,3 +303,37 @@
            )))
 ;; $A%U%l$B!<$A%`M8$(Gg4]C$A6((B
 (add-to-list 'default-frame-alist '(alpha . (0.75 0.75)))
+
+
+; web-mode.el
+; http://web-mode.org/
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+; package.el
+; http://emacs-jp.github.io/packages/package-management/package-el.html
+(require 'package)
+;; MELPA$A$rW7<S(B
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+;; Marmalade$A$rW7<S(B
+(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+;; $A3uFZ;/(B
+(package-initialize)
+
+
+; Scala $(G]C$A6((B
+; http://ganmacs.hatenablog.com/entry/2014/10/03/105829
+(require 'scala-mode2)
+;; (require 'ensime)
+;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(add-to-list 'auto-mode-alist '("\\.sc?\\'" . scala-mode))
+(add-to-list 'auto-mode-alist '("\\.scala?\\'" . scala-mode))
