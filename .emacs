@@ -171,22 +171,6 @@
 ;; lisp 用
 (setq inferior-lisp-program "clisp")
 
-
-;;; http://d.hatena.ne.jp/cou929_la/20110525/1306321857
-;;; flymake for python
-;;(add-hook 'find-file-hook 'flymake-find-file-hook)
-;;(when (load "flymake" t)
-;;  (defun flymake-pyflakes-init ()
-;;    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-;;                       'flymake-create-temp-with-folder-structure))
-;;           (local-file (file-relative-name
-;;                        temp-file
-;;                        (file-name-directory buffer-file-name))))
-;;      (list "~/bin/pychecker"  (list local-file))))
-;;  (add-to-list 'flymake-allowed-file-name-masks
-;;               '("\\.py\\'" flymake-pyflakes-init)))
-;;(load-library "flymake-cursor")
-
 (add-to-list 'load-path "~/elisp/ess-13.09/lisp")
 (require 'ess-site)
 
