@@ -28,7 +28,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history        # share command history data 
+setopt share_history        # share command history data
 
 # emacs keybind
 bindkey -e
@@ -45,7 +45,7 @@ setopt correct
 # pack completion candidate
 setopt list_packed
 
-# colored ls completion 
+# colored ls completion
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 #############################################
@@ -155,6 +155,7 @@ export PATH=${PATH}:/usr/local/texlive/2011/bin/universal-darwin
 #git
 export PATH=${PATH}:/usr/local/share/git-core/contrib/diff-highlight
 
+export PATH=${PATH}:${HOME}/lib/spark/bin
 
 export DL=${HOME}/Downloads
 
