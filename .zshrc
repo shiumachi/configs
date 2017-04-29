@@ -5,7 +5,7 @@
 #
 
 autoload -U compinit
-compinit
+compinit -u
 
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
@@ -248,6 +248,7 @@ export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
 
 # Go Setings
 export GOROOT=/usr/local/Cellar/go/1.3.1/libexec
+export PATH=${PATH}:${GOROOT}/bin
 
 # autopep8
 alias autopep8='autopep8 -r -i --max-line-length=120'
@@ -273,3 +274,12 @@ if [ -f ${PERLBREW_SRC} ]; then
     source ${PERLBREW_SRC}
     perlbrew use perl-5.16.2
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/shiumachi/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/shiumachi/google-cloud-sdk/completion.zsh.inc'
+
+alias goapp=~/google-cloud-sdk/platform/google_appengine/goapp
+
