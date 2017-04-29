@@ -1,10 +1,18 @@
-IdentityFile ~/.ssh/id_rsa
-IdentityFile ~/.ssh/id_rsa_local
+IdentityFile ~/.ssh/github_rsa
+IdentityFile ~/.ssh/bitbucket_rsa
 
 Host github.com
   User git
   Port 22
   Hostname github.com
-  IdentityFile ~/.ssh/id_rsa_local
+  IdentityFile ~/.ssh/github_rsa
+  TCPKeepAlive yes
+  IdentitiesOnly yes
+
+Host bitbucket.org
+  User git
+  Port 22
+  Hostname bitbucket.org
+  IdentityFile ~/.ssh/bitbucket_rsa
   TCPKeepAlive yes
   IdentitiesOnly yes
