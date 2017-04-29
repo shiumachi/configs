@@ -211,3 +211,6 @@ if [ -f ${PERLBREW_SRC} ]; then
     source ${PERLBREW_SRC}
     perlbrew use perl-5.16.2
 fi
+
+# anaconda
+# export PATH=${PATH}:${HOME}/miniconda3/bin
