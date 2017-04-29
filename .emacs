@@ -1,3 +1,18 @@
+; package.el
+; http://emacs-jp.github.io/packages/package-management/package-el.html
+;; http://d.hatena.ne.jp/syohex/20130624/1372082597
+(require 'package)
+;; MELPA$A$rW7<S(B
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+;; Marmalade$A$rW7<S(B
+(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+;; $A3uFZ;/(B
+(setq package-user-dir "~/elisp/elpa/")
+(package-initialize)
+
+
 ;; 2008/9/16
 ;; ;; http://d.hatena.ne.jp/yuko1658/20071213/1197517201
 (add-to-list 'load-path "~/elisp/")
@@ -55,21 +70,6 @@
 ;; 2010/10/24
 ;; for waf
 (setq auto-mode-alist (cons '("wscript" . python-mode) auto-mode-alist))
-
-;; 2010/10/25
-;; cscope
-;; http://namikister.blog101.fc2.com/blog-entry-9.html
-;; (require 'xcscope)
-
-
-;;2007/11/5
-;;Emacs $B$G(B C $B8@8l%W%m%0%i%_%s%0$r;O$a$k?M$X$N%$%s%H%m%@%/%7%g%s(B
-;;flyspell-prog-mode($B<+F0(Bispell$B5!G=(B)
-;;(add-hook 'c-mode-common-hook
-;;          '(lambda ()
-;;             ;; flyspell-prog-mode $B$r%*%s$K$9$k(B
-;;             (flyspell-prog-mode)
-;;))
 
 (desktop-save-mode t)
 
@@ -154,42 +154,6 @@
 		("memo.txt$" . rst-mode)
 		) auto-mode-alist))
 
-;; troter $AJ=(B
-
-;;(defun eval-after-load 'key-chord
-;;  ;; keybind
-;;)
-;;;; (@* "one key")
-;;(defun eval-after-load 'one-key
-;;  (global-set-key [(control x) (v)] 'one-key-menu-VC))
-;;
-;;;; (@* "others")
-;;(defun eval-after-load 'flymake
-;;  (global-set-key [(control c) (d)] 'flymake-display-err-menu-for-current-line))
-;;
-;;(defun eval-after-load 'anything-rurima
-;;  (global-set-key [(control c) (r)] 'anything-rurima)
-;;  (global-set-key [(control c) (control r)] 'anything-rurima-at-point))
-;;
-;;(defun eval-after-load 'popwin
-;;  (global-set-key [(control x) (control p)] popwin:keymap))
-;;
-;;;(global-set-key "\C-z" 'undo)                       ;;UNDO
-;;(global-set-key [f1] 'one-key-menu-help)
-;;
-;;;; window switch
-;;(global-set-key [(meta \[)] (lambda () (interactive) (other-window -1)))
-;;(global-set-key [(meta \])] (lambda () (interactive) (other-window 1)))
-;;
-;;(global-set-key [(control x) (control r)] 'reopen-file)
-;;(global-set-key [(control x) (J)] 'open-junk-file)
-;;
-;;;; open
-;;(when (functionp 'cygstart)
-;;  (global-set-key [(control c) (control f)] 'cygstart))
-;;
-
-
 ;; Go $AQT$(Gk#$ASC(B
 (require 'go-mode-load)
 (add-hook 'go-mode-hook
@@ -207,41 +171,8 @@
 ;; lisp $ASC(B
 (setq inferior-lisp-program "clisp")
 
-
-;;; http://d.hatena.ne.jp/cou929_la/20110525/1306321857
-;;; flymake for python
-;;(add-hook 'find-file-hook 'flymake-find-file-hook)
-;;(when (load "flymake" t)
-;;  (defun flymake-pyflakes-init ()
-;;    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-;;                       'flymake-create-temp-with-folder-structure))
-;;           (local-file (file-relative-name
-;;                        temp-file
-;;                        (file-name-directory buffer-file-name))))
-;;      (list "~/bin/pychecker"  (list local-file))))
-;;  (add-to-list 'flymake-allowed-file-name-masks
-;;               '("\\.py\\'" flymake-pyflakes-init)))
-;;(load-library "flymake-cursor")
-
 (add-to-list 'load-path "~/elisp/ess-13.09/lisp")
 (require 'ess-site)
-
-;(set-default-font "-adobe-courier-bold-r-normal--*-140-*-*-m-*-iso8859-1")
-;(global-font-lock-mode t)                                        ; S/R   TeX
-;(set-face-foreground 'font-lock-comment-face       "Firebrick")  ; #com  %com
-;(set-face-foreground 'font-lock-string-face         "SeaGreen")  ; "str" "str"
-;(set-face-foreground 'font-lock-keyword-face      "MediumBlue")  ; if    \end
-;(set-face-foreground 'font-lock-constant-face      "VioletRed")  ; fun<- {ctr}
-;(set-face-foreground 'font-lock-type-face      "DarkGoldenrod")  ; T,F    ?
-;(set-face-foreground 'font-lock-variable-name-face      "Blue")  ; xv
-;
-;(set-face-foreground 'font-lock-function-name-face "VioletRed")  ; <-    {eq1}
-
-;;(setq auto-mode-alist
-;;     (cons (cons "\\.[rR]$" 'r-mode) auto-mode-alist))
-;;(autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
-;;(setq auto-mode-alist (cons '("\\.R$" . r-mode) auto-mode-alist))
-
 
 (setq auto-mode-alist
       (append '((".R$" . r-mode)) auto-mode-alist)
@@ -303,3 +234,30 @@
            )))
 ;; $A%U%l$B!<$A%`M8$(Gg4]C$A6((B
 (add-to-list 'default-frame-alist '(alpha . (0.75 0.75)))
+
+
+; web-mode.el
+; http://web-mode.org/
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+
+
+; Scala $(G]C$A6((B
+; http://ganmacs.hatenablog.com/entry/2014/10/03/105829
+(require 'scala-mode2)
+;; (require 'ensime)
+;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(add-to-list 'auto-mode-alist '("\\.sc?\\'" . scala-mode))
+(add-to-list 'auto-mode-alist '("\\.scala?\\'" . scala-mode))
+
+; Python $(G]C$A6((B
+(require 'python-pep8)
+(require 'python-pylint)
