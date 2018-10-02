@@ -183,7 +183,7 @@ export VIRTUALENV_USE_DISTRIBUTE=true
 export WORKON_HOME=$HOME/.virtualenvs
 
 # pleage change to python3 if you want to use it
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
 if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
     source /usr/local/share/python/virtualenvwrapper.sh
@@ -214,3 +214,6 @@ fi
 
 # anaconda
 # export PATH=${PATH}:${HOME}/miniconda3/bin
+
+# sqlite3
+export PATH=/usr/local/opt/sqlite/bin:${PATH}
