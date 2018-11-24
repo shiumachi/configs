@@ -223,3 +223,6 @@ alias goapp=~/google-cloud-sdk/platform/google_appengine/goapp
 
 # anaconda
 # export PATH=${PATH}:${HOME}/miniconda3/bin
+
+# sqlite3
+export PATH=/usr/local/opt/sqlite/bin:${PATH}
